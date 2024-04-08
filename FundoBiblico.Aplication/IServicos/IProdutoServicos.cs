@@ -10,10 +10,10 @@ namespace FundoBiblico.Aplication.IServicos
 {
     public interface IProdutoServicos
     {
-        Task CadastroIgreja(Produto produto);
-        Task Atualizar(Produto produto);
-        Task<IEnumerable<Produto>> ObterIgrejas();
-        Task<Produto> ObterIgreja(Guid? id);
+        Task CadastroIgreja(ProdutoModel produto);
+        Task Atualizar(ProdutoAddEditarModel produto);
+        Task<IEnumerable<ProdutoModel>> ObterIgrejas();
+        Task<ProdutoModel> ObterIgreja(Guid? id);
         Task Remover(Guid? id);
     }
 }
