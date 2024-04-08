@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("FundoBiblico.Dominio")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b265c70aee94ddd99a27dd63059280d0e40e360c")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5775a133148e65af3f8acc4850b5169e61ebeb1d")]
 [assembly: System.Reflection.AssemblyProductAttribute("FundoBiblico.Dominio")]
 [assembly: System.Reflection.AssemblyTitleAttribute("FundoBiblico.Dominio")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

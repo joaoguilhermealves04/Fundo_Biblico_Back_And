@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace FundoBiblico.Aplication.IServicos
+namespace FundoBiblico.Aplication.Servicos
 {
-    public interface IProdutoServies
+    internal class ProdutoServicos
     {
     }
 }
