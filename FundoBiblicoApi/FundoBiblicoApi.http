@@ -1,0 +1,6 @@
+@FundoBiblicoApi_HostAddress = http://localhost:5276/api
+
+GET {{FundoBiblicoApi_HostAddress}}/Cliente/
+Accept: application/json
+
+###

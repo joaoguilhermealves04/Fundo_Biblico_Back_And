@@ -1,0 +1,19 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\FundoBiblico.Aplication\FundoBiblico.Aplication.csproj" />
+    <ProjectReference Include="..\FundoBiblico.Dominio\FundoBiblico.Dominio.csproj" />
+    <ProjectReference Include="..\FundoBiblico.Repository\FundoBiblico.Repository.csproj" />
+  </ItemGroup>
+
+</Project>

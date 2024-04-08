@@ -1,0 +1,6 @@
+@FundoBiblico.API_HostAddress = http://localhost:5011
+
+GET {{FundoBiblico.API_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
