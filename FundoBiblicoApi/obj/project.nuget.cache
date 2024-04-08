@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "IUziXB0pBR2S1z+OC4jrDV0XnoTNheylkJfJOKeFCOS9aGwL+zrtZcqpvjpRS6Gh6sW9XwgrML3KdySR5sBbbw==",
+  "dgSpecHash": "/4wuPEZWoJNErRbUH2PWRMyjlAQcdg/btZ5lFAw5XAyfEzPa9nZaTU4hYOndPRowdgMCFMnb4BykiXOdejoj+A==",
   "success": true,
-  "projectFilePath": "C:\\Users\\joaog\\Documents\\CCB\\FundoBiblico\\FundoBiblicoApi\\FundoBiblicoApi.csproj",
+  "projectFilePath": "C:\\Users\\joaog\\Documents\\CCB\\Fundo_Biblico_Back_And\\FundoBiblicoApi\\FundoBiblicoApi.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\joaog\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
     "C:\\Users\\joaog\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",
@@ -48,6 +48,7 @@
     "C:\\Users\\joaog\\.nuget\\packages\\microsoft.sqlserver.server\\1.0.0\\microsoft.sqlserver.server.1.0.0.nupkg.sha512",
     "C:\\Users\\joaog\\.nuget\\packages\\microsoft.win32.systemevents\\6.0.0\\microsoft.win32.systemevents.6.0.0.nupkg.sha512",
     "C:\\Users\\joaog\\.nuget\\packages\\mono.texttemplating\\2.2.1\\mono.texttemplating.2.2.1.nupkg.sha512",
+    "C:\\Users\\joaog\\.nuget\\packages\\scrutor\\4.2.2\\scrutor.4.2.2.nupkg.sha512",
     "C:\\Users\\joaog\\.nuget\\packages\\swashbuckle.aspnetcore\\6.5.0\\swashbuckle.aspnetcore.6.5.0.nupkg.sha512",
     "C:\\Users\\joaog\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\6.5.0\\swashbuckle.aspnetcore.swagger.6.5.0.nupkg.sha512",
     "C:\\Users\\joaog\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\6.5.0\\swashbuckle.aspnetcore.swaggergen.6.5.0.nupkg.sha512",

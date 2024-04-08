@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "OKs+KLoBFRs34okC2FJtpPAFzLdFYi7r+1eWnvXmvH5vLZhWxFCbTTVXSH3oPLda1GIxjL8/HDncATWDWYFtfQ==",
+  "dgSpecHash": "wx8F6HUlGcZCB2um1qBN4xZVmbD/rAftfpiqBCYOhAow2XIOgYZXq/hhZPOPs2rpbYnZ7OYNEV9IOG+6VslVZQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\joaog\\Documents\\CCB\\FundoBiblico\\FundoBiblico.Aplication\\FundoBiblico.Aplication.csproj",
+  "projectFilePath": "C:\\Users\\joaog\\Documents\\CCB\\Fundo_Biblico_Back_And\\FundoBiblico.Aplication\\FundoBiblico.Aplication.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\joaog\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
     "C:\\Users\\joaog\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",

@@ -18,3 +18,9 @@ C:\Users\joaog\Documents\Projetos\FundoBiblico\FundoBiblico.Infra.Ioc\obj\Debug\
 C:\Users\joaog\Documents\Projetos\FundoBiblico\FundoBiblico.Infra.Ioc\obj\Debug\net8.0\refint\FundoBiblico.Infra.Ioc.dll
 C:\Users\joaog\Documents\Projetos\FundoBiblico\FundoBiblico.Infra.Ioc\obj\Debug\net8.0\FundoBiblico.Infra.Ioc.pdb
 C:\Users\joaog\Documents\Projetos\FundoBiblico\FundoBiblico.Infra.Ioc\obj\Debug\net8.0\ref\FundoBiblico.Infra.Ioc.dll
+C:\Users\joaog\Documents\CCB\Fundo_Biblico_Back_And\FundoBiblico.Infra.Ioc\obj\Debug\net8.0\FundoBiblico.Infra.Ioc.csproj.AssemblyReference.cache
+C:\Users\joaog\Documents\CCB\Fundo_Biblico_Back_And\FundoBiblico.Infra.Ioc\obj\Debug\net8.0\FundoBiblico.Infra.Ioc.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\joaog\Documents\CCB\Fundo_Biblico_Back_And\FundoBiblico.Infra.Ioc\obj\Debug\net8.0\FundoBiblico.Infra.Ioc.AssemblyInfoInputs.cache
+C:\Users\joaog\Documents\CCB\Fundo_Biblico_Back_And\FundoBiblico.Infra.Ioc\obj\Debug\net8.0\FundoBiblico.Infra.Ioc.AssemblyInfo.cs
+C:\Users\joaog\Documents\CCB\Fundo_Biblico_Back_And\FundoBiblico.Infra.Ioc\obj\Debug\net8.0\FundoBiblico.Infra.Ioc.csproj.CoreCompileInputs.cache
+C:\Users\joaog\Documents\CCB\Fundo_Biblico_Back_And\FundoBiblico.Infra.Ioc\obj\Debug\net8.0\FundoBiblico.Infra.Ioc.sourcelink.json

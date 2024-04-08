@@ -613,7 +613,7 @@
           "System.Text.Json": "8.0.0"
         },
         "compile": {
-          "lib/net8.0/_._": {
+          "lib/net8.0/Microsoft.Extensions.DependencyModel.dll": {
             "related": ".xml"
           }
         },
@@ -912,6 +912,23 @@
         },
         "runtime": {
           "lib/netstandard2.0/Mono.TextTemplating.dll": {}
+        }
+      },
+      "Scrutor/4.2.2": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "6.0.0",
+          "Microsoft.Extensions.DependencyModel": "6.0.0"
+        },
+        "compile": {
+          "lib/net6.0/Scrutor.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/Scrutor.dll": {
+            "related": ".pdb;.xml"
+          }
         }
       },
       "Swashbuckle.AspNetCore/6.5.0": {
@@ -1621,6 +1638,8 @@
           "FundoBiblico.Aplication": "1.0.0",
           "FundoBiblico.Dominio": "1.0.0",
           "FundoBiblico.Repository": "1.0.0",
+          "Microsoft.Extensions.DependencyModel": "8.0.0",
+          "Scrutor": "4.2.2",
           "Swashbuckle.AspNetCore": "6.5.0"
         },
         "compile": {
@@ -3314,6 +3333,29 @@
         "mono.texttemplating.nuspec"
       ]
     },
+    "Scrutor/4.2.2": {
+      "sha512": "t5VIYA7WJXoJJo7s4DoHakMGwTu+MeEnZumMOhTCH7kz9xWha24G7dJNxWrHPlu0ZdZAS4jDZCxxAnyaBh7uYw==",
+      "type": "package",
+      "path": "scrutor/4.2.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net461/Scrutor.dll",
+        "lib/net461/Scrutor.pdb",
+        "lib/net461/Scrutor.xml",
+        "lib/net6.0/Scrutor.dll",
+        "lib/net6.0/Scrutor.pdb",
+        "lib/net6.0/Scrutor.xml",
+        "lib/netcoreapp3.1/Scrutor.dll",
+        "lib/netcoreapp3.1/Scrutor.pdb",
+        "lib/netcoreapp3.1/Scrutor.xml",
+        "lib/netstandard2.0/Scrutor.dll",
+        "lib/netstandard2.0/Scrutor.pdb",
+        "lib/netstandard2.0/Scrutor.xml",
+        "scrutor.4.2.2.nupkg.sha512",
+        "scrutor.nuspec"
+      ]
+    },
     "Swashbuckle.AspNetCore/6.5.0": {
       "sha512": "FK05XokgjgwlCI6wCT+D4/abtQkL1X1/B9Oas6uIwHFmYrIO9WUD5aLC9IzMs9GnHfUXOtXZ2S43gN1mhs5+aA==",
       "type": "package",
@@ -4609,23 +4651,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Rafael\\.nuget\\packages\\": {},
+    "C:\\Users\\joaog\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Rafael\\Documents\\GitHub\\FundoBiblico\\FundoBiblicoApi\\FundoBiblicoApi.csproj",
+      "projectUniqueName": "C:\\Users\\joaog\\Documents\\CCB\\Fundo_Biblico_Back_And\\FundoBiblicoApi\\FundoBiblicoApi.csproj",
       "projectName": "FundoBiblicoApi",
-      "projectPath": "C:\\Users\\Rafael\\Documents\\GitHub\\FundoBiblico\\FundoBiblicoApi\\FundoBiblicoApi.csproj",
-      "packagesPath": "C:\\Users\\Rafael\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Rafael\\Documents\\GitHub\\FundoBiblico\\FundoBiblicoApi\\obj\\",
+      "projectPath": "C:\\Users\\joaog\\Documents\\CCB\\Fundo_Biblico_Back_And\\FundoBiblicoApi\\FundoBiblicoApi.csproj",
+      "packagesPath": "C:\\Users\\joaog\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\joaog\\Documents\\CCB\\Fundo_Biblico_Back_And\\FundoBiblicoApi\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\Rafael\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\joaog\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -4641,11 +4683,11 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\Users\\Rafael\\Documents\\GitHub\\FundoBiblico\\FundoBiblico.Aplication\\FundoBiblico.Aplication.csproj": {
-              "projectPath": "C:\\Users\\Rafael\\Documents\\GitHub\\FundoBiblico\\FundoBiblico.Aplication\\FundoBiblico.Aplication.csproj"
+            "C:\\Users\\joaog\\Documents\\CCB\\Fundo_Biblico_Back_And\\FundoBiblico.Aplication\\FundoBiblico.Aplication.csproj": {
+              "projectPath": "C:\\Users\\joaog\\Documents\\CCB\\Fundo_Biblico_Back_And\\FundoBiblico.Aplication\\FundoBiblico.Aplication.csproj"
             },
-            "C:\\Users\\Rafael\\Documents\\GitHub\\FundoBiblico\\FundoBiblico.Infra.Ioc\\FundoBiblico.Infra.Ioc.csproj": {
-              "projectPath": "C:\\Users\\Rafael\\Documents\\GitHub\\FundoBiblico\\FundoBiblico.Infra.Ioc\\FundoBiblico.Infra.Ioc.csproj"
+            "C:\\Users\\joaog\\Documents\\CCB\\Fundo_Biblico_Back_And\\FundoBiblico.Infra.Ioc\\FundoBiblico.Infra.Ioc.csproj": {
+              "projectPath": "C:\\Users\\joaog\\Documents\\CCB\\Fundo_Biblico_Back_And\\FundoBiblico.Infra.Ioc\\FundoBiblico.Infra.Ioc.csproj"
             }
           }
         }
@@ -4654,11 +4696,6 @@
         "warnAsError": [
           "NU1605"
         ]
-      },
-      "restoreAuditProperties": {
-        "enableAudit": "true",
-        "auditLevel": "low",
-        "auditMode": "direct"
       }
     },
     "frameworks": {
@@ -4703,7 +4740,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.201/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\joaog\\Documents\\CCB\\FundoBiblico\\FundoBiblico.Aplication\\FundoBiblico.Aplication.csproj": {}
+    "C:\\Users\\joaog\\Documents\\CCB\\Fundo_Biblico_Back_And\\FundoBiblico.Aplication\\FundoBiblico.Aplication.csproj": {}
   },
   "projects": {
-    "C:\\Users\\joaog\\Documents\\CCB\\FundoBiblico\\FundoBiblico.Aplication\\FundoBiblico.Aplication.csproj": {
+    "C:\\Users\\joaog\\Documents\\CCB\\Fundo_Biblico_Back_And\\FundoBiblico.Aplication\\FundoBiblico.Aplication.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\joaog\\Documents\\CCB\\FundoBiblico\\FundoBiblico.Aplication\\FundoBiblico.Aplication.csproj",
+        "projectUniqueName": "C:\\Users\\joaog\\Documents\\CCB\\Fundo_Biblico_Back_And\\FundoBiblico.Aplication\\FundoBiblico.Aplication.csproj",
         "projectName": "FundoBiblico.Aplication",
-        "projectPath": "C:\\Users\\joaog\\Documents\\CCB\\FundoBiblico\\FundoBiblico.Aplication\\FundoBiblico.Aplication.csproj",
+        "projectPath": "C:\\Users\\joaog\\Documents\\CCB\\Fundo_Biblico_Back_And\\FundoBiblico.Aplication\\FundoBiblico.Aplication.csproj",
         "packagesPath": "C:\\Users\\joaog\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\joaog\\Documents\\CCB\\FundoBiblico\\FundoBiblico.Aplication\\obj\\",
+        "outputPath": "C:\\Users\\joaog\\Documents\\CCB\\Fundo_Biblico_Back_And\\FundoBiblico.Aplication\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -33,11 +33,11 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\joaog\\Documents\\CCB\\FundoBiblico\\FundoBiblico.Dominio\\FundoBiblico.Dominio.csproj": {
-                "projectPath": "C:\\Users\\joaog\\Documents\\CCB\\FundoBiblico\\FundoBiblico.Dominio\\FundoBiblico.Dominio.csproj"
+              "C:\\Users\\joaog\\Documents\\CCB\\Fundo_Biblico_Back_And\\FundoBiblico.Dominio\\FundoBiblico.Dominio.csproj": {
+                "projectPath": "C:\\Users\\joaog\\Documents\\CCB\\Fundo_Biblico_Back_And\\FundoBiblico.Dominio\\FundoBiblico.Dominio.csproj"
               },
-              "C:\\Users\\joaog\\Documents\\CCB\\FundoBiblico\\FundoBiblico.Repository\\FundoBiblico.Repository.csproj": {
-                "projectPath": "C:\\Users\\joaog\\Documents\\CCB\\FundoBiblico\\FundoBiblico.Repository\\FundoBiblico.Repository.csproj"
+              "C:\\Users\\joaog\\Documents\\CCB\\Fundo_Biblico_Back_And\\FundoBiblico.Repository\\FundoBiblico.Repository.csproj": {
+                "projectPath": "C:\\Users\\joaog\\Documents\\CCB\\Fundo_Biblico_Back_And\\FundoBiblico.Repository\\FundoBiblico.Repository.csproj"
               }
             }
           }
@@ -79,14 +79,14 @@
         }
       }
     },
-    "C:\\Users\\joaog\\Documents\\CCB\\FundoBiblico\\FundoBiblico.Dominio\\FundoBiblico.Dominio.csproj": {
+    "C:\\Users\\joaog\\Documents\\CCB\\Fundo_Biblico_Back_And\\FundoBiblico.Dominio\\FundoBiblico.Dominio.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\joaog\\Documents\\CCB\\FundoBiblico\\FundoBiblico.Dominio\\FundoBiblico.Dominio.csproj",
+        "projectUniqueName": "C:\\Users\\joaog\\Documents\\CCB\\Fundo_Biblico_Back_And\\FundoBiblico.Dominio\\FundoBiblico.Dominio.csproj",
         "projectName": "FundoBiblico.Dominio",
-        "projectPath": "C:\\Users\\joaog\\Documents\\CCB\\FundoBiblico\\FundoBiblico.Dominio\\FundoBiblico.Dominio.csproj",
+        "projectPath": "C:\\Users\\joaog\\Documents\\CCB\\Fundo_Biblico_Back_And\\FundoBiblico.Dominio\\FundoBiblico.Dominio.csproj",
         "packagesPath": "C:\\Users\\joaog\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\joaog\\Documents\\CCB\\FundoBiblico\\FundoBiblico.Dominio\\obj\\",
+        "outputPath": "C:\\Users\\joaog\\Documents\\CCB\\Fundo_Biblico_Back_And\\FundoBiblico.Dominio\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -139,14 +139,14 @@
         }
       }
     },
-    "C:\\Users\\joaog\\Documents\\CCB\\FundoBiblico\\FundoBiblico.Repository\\FundoBiblico.Repository.csproj": {
+    "C:\\Users\\joaog\\Documents\\CCB\\Fundo_Biblico_Back_And\\FundoBiblico.Repository\\FundoBiblico.Repository.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\joaog\\Documents\\CCB\\FundoBiblico\\FundoBiblico.Repository\\FundoBiblico.Repository.csproj",
+        "projectUniqueName": "C:\\Users\\joaog\\Documents\\CCB\\Fundo_Biblico_Back_And\\FundoBiblico.Repository\\FundoBiblico.Repository.csproj",
         "projectName": "FundoBiblico.Repository",
-        "projectPath": "C:\\Users\\joaog\\Documents\\CCB\\FundoBiblico\\FundoBiblico.Repository\\FundoBiblico.Repository.csproj",
+        "projectPath": "C:\\Users\\joaog\\Documents\\CCB\\Fundo_Biblico_Back_And\\FundoBiblico.Repository\\FundoBiblico.Repository.csproj",
         "packagesPath": "C:\\Users\\joaog\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\joaog\\Documents\\CCB\\FundoBiblico\\FundoBiblico.Repository\\obj\\",
+        "outputPath": "C:\\Users\\joaog\\Documents\\CCB\\Fundo_Biblico_Back_And\\FundoBiblico.Repository\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -168,8 +168,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\joaog\\Documents\\CCB\\FundoBiblico\\FundoBiblico.Dominio\\FundoBiblico.Dominio.csproj": {
-                "projectPath": "C:\\Users\\joaog\\Documents\\CCB\\FundoBiblico\\FundoBiblico.Dominio\\FundoBiblico.Dominio.csproj"
+              "C:\\Users\\joaog\\Documents\\CCB\\Fundo_Biblico_Back_And\\FundoBiblico.Dominio\\FundoBiblico.Dominio.csproj": {
+                "projectPath": "C:\\Users\\joaog\\Documents\\CCB\\Fundo_Biblico_Back_And\\FundoBiblico.Dominio\\FundoBiblico.Dominio.csproj"
               }
             }
           }

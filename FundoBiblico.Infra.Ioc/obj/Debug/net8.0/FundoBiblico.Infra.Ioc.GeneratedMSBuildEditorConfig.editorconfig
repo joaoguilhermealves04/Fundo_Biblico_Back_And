@@ -8,6 +8,6 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = FundoBiblico.Infra.Ioc
-build_property.ProjectDir = C:\Users\joaog\Documents\CCB\FundoBiblico\FundoBiblico.Infra.Ioc\
+build_property.ProjectDir = C:\Users\joaog\Documents\CCB\Fundo_Biblico_Back_And\FundoBiblico.Infra.Ioc\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
