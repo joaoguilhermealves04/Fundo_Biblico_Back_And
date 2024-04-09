@@ -21,9 +21,25 @@ namespace FundoBiblico.Aplication.Servicos
             _produtoRepository = produtoRepository;
             _vailidar = validacaoDosDadosHelper;
         }
-        public Task Atualizar(ProdutoAddEditarModel produto)
+        public async Task Atualizar(ProdutoAddEditarModel produto)
         {
-            throw new NotImplementedException();
+
+            try
+            {
+                var obterProduto = await _produtoRepository.ObterPorId(produto.id);
+                if (obterProduto is null)
+                    throw new Exception("produto não encontrada");
+
+                obterProduto.AtualizarEntidadeProduto(produto.Nome, produto.Descricao, produto.Preco, 
+                    produto.QuantidadeEstoque, produto.IgrejaPertencente);
+
+                _produtoRepository.Atualizar(obterProduto);
+            }
+            catch (Exception ex)
+            {
+
+                throw new Exception("Erro ao fazer atualização do produto.",ex);
+            }
         }
 
         public async Task CadastroProduto(ProdutoModel produto)
