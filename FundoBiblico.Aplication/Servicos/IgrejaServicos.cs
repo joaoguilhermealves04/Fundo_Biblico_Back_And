@@ -20,14 +20,14 @@ namespace FundoBiblico.Aplication.Servicos
         {
             try
             {
-                var igreja = await _igrejaRepository.ObterPorId(igrejaModel.Id);
+                var igreja = _igrejaRepository.ObterPorId(igrejaModel.Id);
 
                 if (igreja is null)
                     throw new Exception("Igreja não encontrada");
 
-                igreja.AtualizarEntidadeIgreja(igreja.Nome, igreja.UF, igreja.Setor);
+                igreja.Result.AtualizarEntidadeIgreja(igrejaModel.Nome, igrejaModel.UF, igrejaModel.Setor);
 
-                _igrejaRepository.Atualizar((Igreja)igreja);
+                _igrejaRepository.Atualizar(igreja.Result);
             }
             catch (Exception ex)
             {

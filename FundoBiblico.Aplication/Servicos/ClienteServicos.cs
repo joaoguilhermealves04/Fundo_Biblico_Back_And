@@ -33,11 +33,11 @@ namespace FundoBiblico.Aplication.Servicos
         {
             try
             {
-                var clienteEntity = await _clienteRepositroy.ObterPorId(clienteModel.Id);
+                var clienteEntity =  _clienteRepositroy.ObterPorId(clienteModel.Id);
 
-                clienteEntity.AtualizarEntidadeCliente(clienteModel.Nome);
+                clienteEntity.Result.AtualizarEntidadeCliente(clienteModel.Nome);
 
-                _clienteRepositroy.Atualizar(clienteEntity);
+                _clienteRepositroy.Atualizar(clienteEntity.Result);
             }
             catch (Exception ex)
             {
@@ -52,14 +52,14 @@ namespace FundoBiblico.Aplication.Servicos
                 if (id == null)
                     throw new InvalidOperationException("Id não pode ser nulo.");
 
-                var unicoCliente = await _clienteRepositroy.ObterPorId(id);
+                var unicoCliente =  _clienteRepositroy.ObterPorId(id);
 
                 var InformacaoDoCliente = new ClienteModel
                 {
-                    Id = unicoCliente.Id,
-                    Nome = unicoCliente.Nome,
-                    DataCadastro = unicoCliente.DataCadastro,
-                    NumeroFilaEspera = unicoCliente.NumeroFilaEspera
+                    Id = unicoCliente.Result.Id,
+                    Nome = unicoCliente.Result.Nome,
+                    DataCadastro = unicoCliente.Result.DataCadastro,
+                    NumeroFilaEspera = unicoCliente.Result.NumeroFilaEspera
                 };
 
                 return InformacaoDoCliente;

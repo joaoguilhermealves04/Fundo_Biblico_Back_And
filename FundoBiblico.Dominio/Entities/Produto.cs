@@ -11,23 +11,26 @@ namespace FundoBiblico.Dominio.Entity
     {
         public string Nome { get; private set; }
         public string Descricao { get; private set; }
-        public decimal Preco { get; private set; }
+        public string Foto { get; private set; }
+        public double Preco { get; private set; }
         public int QuantidadeEstoque { get;private set; }
 
         private Produto() { } // Construtor privado para evitar criação sem parâmetros
 
-        public Produto(string nome, string descricao, decimal preco, int quantidadeEstoque)
+        public Produto(string nome, string descricao, string foto, double preco, int quantidadeEstoque)
         {
             Nome = nome;
             Descricao = descricao;
+            Foto = foto;
             Preco = preco;
             QuantidadeEstoque = quantidadeEstoque;
         }
 
-        public void AtualizarEntidadeProduto(string nome, string descricao, decimal preco, int quantidadeEstoque)
+        public void AtualizarEntidadeProduto(string nome, string descricao,string foto, double preco, int quantidadeEstoque)
         {
             SetNome(nome);
             Descricao = descricao;
+            Foto = foto;
             Preco = preco;
             QuantidadeEstoque = quantidadeEstoque;
         }

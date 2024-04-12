@@ -4,7 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace FundoBiblicoApi.Controllers
 {
-    [Route("api/igreja")]
+    [Route("api/produto")]
     public class ProdutoController : Controller
     {
         private readonly IProdutoServicos _produtoServicos;
@@ -24,9 +24,9 @@ namespace FundoBiblicoApi.Controllers
         }
 
         [HttpPut("Atualizar")]
-        public IActionResult Atualizar(ProdutoAddEditarModel produto)
+        public IActionResult Atualizar(ProdutoAddEditarModel produtoAddEditar)
         {
-            var produtoAtulizar = _produtoServicos.Atualizar(produto);
+            var produtoAtulizar = _produtoServicos.Atualizar(produtoAddEditar);
             if (produtoAtulizar.Exception != null)
                 return BadRequest(produtoAtulizar.Exception.ToString());
 
@@ -47,11 +47,11 @@ namespace FundoBiblicoApi.Controllers
         [HttpGet("get/{id}")]
         public async Task<IActionResult> ObterProduto(Guid id)
         {
-            var produto = await _produtoServicos.ObterProduto(id);
+            var produto = _produtoServicos.ObterProduto(id);
             if (produto == null)
                 BadRequest();
 
-            return Ok(produto);
+            return Ok(produto.Result);
         }
     }
 }
