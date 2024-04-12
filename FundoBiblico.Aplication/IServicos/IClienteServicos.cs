@@ -12,7 +12,7 @@ namespace FundoBiblico.Aplication.IServicos
     {
         Task CadastroCliente(ClienteAddEditarModel cliente);
         Task AtualizarCliente(ClienteAddEditarModel cliente);
-        Task<IEnumerable<ClienteModel>> ObterClientes(ClienteModel cliente);
+        Task<IEnumerable<ClienteModel>> ObterClientes();
         Task<ClienteModel> ObterCliente(Guid? id);
     }
 }

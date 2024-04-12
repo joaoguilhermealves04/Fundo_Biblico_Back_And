@@ -71,7 +71,7 @@ namespace FundoBiblico.Aplication.Servicos
             }
         }
 
-        public async Task<IEnumerable<ClienteModel>> ObterClientes(ClienteModel cliente)
+        public async Task<IEnumerable<ClienteModel>> ObterClientes()
         {
             try
             {
