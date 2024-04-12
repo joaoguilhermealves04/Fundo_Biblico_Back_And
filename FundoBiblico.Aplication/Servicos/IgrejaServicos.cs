@@ -123,7 +123,6 @@ namespace FundoBiblico.Aplication.Servicos
             }
             catch (Exception ex)
             {
-
                 throw new Exception("Erro ao remover a igreja.", ex);
             }
         }
