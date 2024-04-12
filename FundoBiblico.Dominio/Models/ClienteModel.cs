@@ -12,7 +12,6 @@ namespace FundoBiblico.Dominio.Models
         public Guid Id { get; set; }
         public string Nome { get; set; }
         public int NumeroFilaEspera { get; set; }
-        public Igreja IgrejaPertencente { get; set; }
         public DateTime DataCadastro { get; set; }
     }
 }

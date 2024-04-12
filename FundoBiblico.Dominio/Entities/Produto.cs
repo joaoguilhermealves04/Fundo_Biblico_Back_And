@@ -13,8 +13,6 @@ namespace FundoBiblico.Dominio.Entity
         public string Descricao { get; private set; }
         public decimal Preco { get; private set; }
         public int QuantidadeEstoque { get;private set; }
-        public Guid IgrejaPertencenteId { get; private set; } // Chave estrangeira para a igreja pertencente
-        public Igreja IgrejaPertencente { get; private set; }
 
         private Produto() { } // Construtor privado para evitar criação sem parâmetros
 
@@ -26,22 +24,14 @@ namespace FundoBiblico.Dominio.Entity
             QuantidadeEstoque = quantidadeEstoque;
         }
 
-        public void AtualizarEntidadeProduto(string nome, string descricao, decimal preco, int quantidadeEstoque,Igreja igreja)
+        public void AtualizarEntidadeProduto(string nome, string descricao, decimal preco, int quantidadeEstoque)
         {
             SetNome(nome);
             Descricao = descricao;
             Preco = preco;
             QuantidadeEstoque = quantidadeEstoque;
-            SetIgrejaPertencente(igreja);
         }
 
-        private void SetIgrejaPertencente(Igreja igrejaPertencente)
-        {
-            if (igrejaPertencente is null)
-                throw new ArgumentException("Por favor! Informe a igreja");
-
-            IgrejaPertencente = igrejaPertencente;
-        }
 
         public void SetNome(string nome) => Nome = nome != null ? nome.ToLower().Trim() : "";
 

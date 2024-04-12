@@ -31,7 +31,7 @@ namespace FundoBiblico.Aplication.Servicos
                     throw new Exception("produto não encontrada");
 
                 obterProduto.AtualizarEntidadeProduto(produto.Nome, produto.Descricao, produto.Preco, 
-                    produto.QuantidadeEstoque, produto.IgrejaPertencente);
+                    produto.QuantidadeEstoque);
 
                 _produtoRepository.Atualizar(obterProduto);
             }
@@ -76,8 +76,7 @@ namespace FundoBiblico.Aplication.Servicos
                     Nome = produto.Nome,
                     Descricao = produto.Descricao,
                     Preco = produto.Preco,
-                    QuantidadeEstoque = produto.QuantidadeEstoque,
-                    IgrejaPertencente = produto.IgrejaPertencente
+                    QuantidadeEstoque = produto.QuantidadeEstoque
                 };
 
                 return resultado;
@@ -107,7 +106,6 @@ namespace FundoBiblico.Aplication.Servicos
                         Descricao = p.Descricao,
                         Preco = p.Preco,
                         QuantidadeEstoque = p.QuantidadeEstoque,
-                        IgrejaPertencente = p.IgrejaPertencente
                     };
 
                     trazerProdutos.Add(produtosRetorno);

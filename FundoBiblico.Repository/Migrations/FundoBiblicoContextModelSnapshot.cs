@@ -34,17 +34,49 @@ namespace FundoBiblico.Repository.Migrations
                     b.Property<DateTime>("DataCadastro")
                         .HasColumnType("datetime2");
 
-                    b.Property<double>("Troco")
-                        .HasColumnType("float");
+                    b.Property<Guid>("Igreja")
+                        .HasColumnType("uniqueidentifier");
 
-                    b.Property<double>("ValorTotal")
-                        .HasColumnType("float");
+                    b.Property<decimal>("ValorTotal")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<Guid>("igrejaId")
+                        .HasColumnType("uniqueidentifier");
 
                     b.HasKey("Id");
 
                     b.HasIndex("ClienteId");
 
+                    b.HasIndex("igrejaId");
+
                     b.ToTable("Compras", (string)null);
+                });
+
+            modelBuilder.Entity("FundoBiblico.Dominio.Entities.IgrejaProduto", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<DateTime>("DataCadastro")
+                        .HasColumnType("datetime2");
+
+                    b.Property<Guid>("IgrejaId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<Guid>("ProdutoId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<int>("Quantidade")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("IgrejaId");
+
+                    b.HasIndex("ProdutoId");
+
+                    b.ToTable("IgrejaProdutos", (string)null);
                 });
 
             modelBuilder.Entity("FundoBiblico.Dominio.Entity.Cliente", b =>
@@ -56,12 +88,6 @@ namespace FundoBiblico.Repository.Migrations
                     b.Property<DateTime>("DataCadastro")
                         .HasColumnType("datetime2");
 
-                    b.Property<Guid>("IgrejaPertencenteId")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<Guid>("IngrejaId")
-                        .HasColumnType("uniqueidentifier");
-
                     b.Property<string>("Nome")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -70,8 +96,6 @@ namespace FundoBiblico.Repository.Migrations
                         .HasColumnType("int");
 
                     b.HasKey("Id");
-
-                    b.HasIndex("IgrejaPertencenteId");
 
                     b.ToTable("Clientes", (string)null);
                 });
@@ -118,9 +142,6 @@ namespace FundoBiblico.Repository.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<Guid>("IgrejaPertencenteId")
-                        .HasColumnType("uniqueidentifier");
-
                     b.Property<string>("Nome")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -135,31 +156,45 @@ namespace FundoBiblico.Repository.Migrations
 
                     b.HasIndex("CompraId");
 
-                    b.HasIndex("IgrejaPertencenteId");
-
                     b.ToTable("Produtos", (string)null);
                 });
 
             modelBuilder.Entity("FundoBiblico.Dominio.Entities.Compra", b =>
                 {
                     b.HasOne("FundoBiblico.Dominio.Entity.Cliente", "Cliente")
-                        .WithMany()
+                        .WithMany("Compras")
                         .HasForeignKey("ClienteId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.Navigation("Cliente");
-                });
-
-            modelBuilder.Entity("FundoBiblico.Dominio.Entity.Cliente", b =>
-                {
-                    b.HasOne("FundoBiblico.Dominio.Entity.Igreja", "IgrejaPertencente")
+                    b.HasOne("FundoBiblico.Dominio.Entity.Igreja", "igreja")
                         .WithMany()
-                        .HasForeignKey("IgrejaPertencenteId")
+                        .HasForeignKey("igrejaId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.Navigation("IgrejaPertencente");
+                    b.Navigation("Cliente");
+
+                    b.Navigation("igreja");
+                });
+
+            modelBuilder.Entity("FundoBiblico.Dominio.Entities.IgrejaProduto", b =>
+                {
+                    b.HasOne("FundoBiblico.Dominio.Entity.Igreja", "Igreja")
+                        .WithMany()
+                        .HasForeignKey("IgrejaId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("FundoBiblico.Dominio.Entity.Produto", "Produto")
+                        .WithMany()
+                        .HasForeignKey("ProdutoId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Igreja");
+
+                    b.Navigation("Produto");
                 });
 
             modelBuilder.Entity("FundoBiblico.Dominio.Entity.Produto", b =>
@@ -167,19 +202,16 @@ namespace FundoBiblico.Repository.Migrations
                     b.HasOne("FundoBiblico.Dominio.Entities.Compra", null)
                         .WithMany("Produtos")
                         .HasForeignKey("CompraId");
-
-                    b.HasOne("FundoBiblico.Dominio.Entity.Igreja", "IgrejaPertencente")
-                        .WithMany()
-                        .HasForeignKey("IgrejaPertencenteId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("IgrejaPertencente");
                 });
 
             modelBuilder.Entity("FundoBiblico.Dominio.Entities.Compra", b =>
                 {
                     b.Navigation("Produtos");
+                });
+
+            modelBuilder.Entity("FundoBiblico.Dominio.Entity.Cliente", b =>
+                {
+                    b.Navigation("Compras");
                 });
 #pragma warning restore 612, 618
         }

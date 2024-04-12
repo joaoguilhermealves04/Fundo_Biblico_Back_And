@@ -13,9 +13,6 @@ namespace FundoBiblico.Dominio.Entity
         public string Nome { get; private set; }
         public int NumeroFilaEspera { get; private set; }
 
-        public Guid IngrejaId { get; set; }
-        public Igreja IgrejaPertencente { get; private set; }
-
         public List<Compra> Compras { get; private set; }
 
         private Cliente(){}
@@ -27,13 +24,11 @@ namespace FundoBiblico.Dominio.Entity
         public Cliente(string nome, Igreja igrejaPertencente)
         {
             SetNome(nome);
-            SetIgrejaPertencente(igrejaPertencente);
         }
 
-        public void AtualizarEntidadeCliente(string nome, Igreja igrejaPertencente)
+        public void AtualizarEntidadeCliente(string nome)
         {
             SetNome(nome);
-            SetIgrejaPertencente(igrejaPertencente);
         }
 
         private void SetNome(string nome)
@@ -42,14 +37,6 @@ namespace FundoBiblico.Dominio.Entity
                 throw new ArgumentException("Por favor! Preencha o nome");
 
             Nome = nome;
-        }
-
-        private void SetIgrejaPertencente(Igreja igrejaPertencente)
-        {
-            if (igrejaPertencente is null)
-                throw new ArgumentException("Por favor! Informe a igreja");
-
-            IgrejaPertencente = igrejaPertencente;
         }
 
         public void ReiniciarNumeroFila() => NumeroFilaEspera = 0;
