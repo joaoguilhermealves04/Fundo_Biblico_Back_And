@@ -19,11 +19,7 @@ builder.Services.AddClassesMatchingInterfaces(nameof(FundoBiblico));
 //Swagger
 builder.Services.RegisterSwagger();
 
-//builder.Services.AddControllers();
-//builder.Services.AddSwaggerGen(c =>
-//{
-//    c.SwaggerDoc("v1", new OpenApiInfo { Title = "Fundo Biblico Api", Version = "v1" });
-//});
+
 var app = builder.Build();
 
 if (app.Environment.IsDevelopment())

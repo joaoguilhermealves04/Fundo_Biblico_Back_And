@@ -51,7 +51,6 @@ namespace FundoBiblico.Aplication.Servicos
             {
                 throw new Exception("Erro ao Cadastar Igreja", ex);
             }
-
         }
 
         public async Task<IEnumerable<IgrejaModel>> ObterIgrejas()
