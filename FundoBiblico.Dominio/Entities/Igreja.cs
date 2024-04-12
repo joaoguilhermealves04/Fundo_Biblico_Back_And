@@ -27,7 +27,12 @@ namespace FundoBiblico.Dominio.Entity
             Setor = setor;
         }
 
-        public void SetNome(string nome) => Nome = nome != null ? nome.ToLower().Trim() : "";
+        public void SetNome(string nome)
+        {
+            if (string.IsNullOrEmpty(nome))
+                throw new ArgumentException("Por favor! Preencha o nome");
 
+            Nome = nome.ToLower().Trim();
+        }
     }
 }

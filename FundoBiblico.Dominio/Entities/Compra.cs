@@ -9,24 +9,24 @@ using System.Threading.Tasks;
 
 namespace FundoBiblico.Dominio.Entities
 {
-    public class Compra :EntityBase
+    public class Compra : EntityBase
     {
-        public Cliente Cliente { get;private set; }
-        public List<Produto> Produtos { get;private set; }
-        public Double ValorTotal { get; private set; }
-        public Double Troco { get; private set; }
+        public Guid ClienteId { get; set; }
+        public Cliente Cliente { get; private set; }
+        public List<Produto> Produtos { get; private set; }
+        public decimal ValorTotal { get; private set; }
+        public decimal Troco { get; private set; }
 
 
         public void Comprar(Cliente cliente, List<Produto> produtos)
         {
             Cliente = cliente;
-            Produtos= produtos;
+            Produtos = produtos;
         }
 
-        public double CalculaTroco(double valorTotal, double valorQueIraPagar)
+        public decimal CalculaTroco(decimal valorTotal, decimal valorQueIraPagar)
         {
-            double troco = valorQueIraPagar - valorTotal;
-            return troco;
+            return valorQueIraPagar - valorTotal;
         }
 
     }

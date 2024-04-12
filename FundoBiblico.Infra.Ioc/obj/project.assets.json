@@ -3384,23 +3384,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\joaog\\.nuget\\packages\\": {},
+    "C:\\Users\\Rafael\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\joaog\\Documents\\CCB\\Fundo_Biblico_Back_And\\FundoBiblico.Infra.Ioc\\FundoBiblico.Infra.Ioc.csproj",
+      "projectUniqueName": "C:\\Users\\Rafael\\Documents\\GitHub\\Fundo_Biblico_Back_And\\FundoBiblico.Infra.Ioc\\FundoBiblico.Infra.Ioc.csproj",
       "projectName": "FundoBiblico.Infra.Ioc",
-      "projectPath": "C:\\Users\\joaog\\Documents\\CCB\\Fundo_Biblico_Back_And\\FundoBiblico.Infra.Ioc\\FundoBiblico.Infra.Ioc.csproj",
-      "packagesPath": "C:\\Users\\joaog\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\joaog\\Documents\\CCB\\Fundo_Biblico_Back_And\\FundoBiblico.Infra.Ioc\\obj\\",
+      "projectPath": "C:\\Users\\Rafael\\Documents\\GitHub\\Fundo_Biblico_Back_And\\FundoBiblico.Infra.Ioc\\FundoBiblico.Infra.Ioc.csproj",
+      "packagesPath": "C:\\Users\\Rafael\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Rafael\\Documents\\GitHub\\Fundo_Biblico_Back_And\\FundoBiblico.Infra.Ioc\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\joaog\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Rafael\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -3416,14 +3416,14 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\Users\\joaog\\Documents\\CCB\\Fundo_Biblico_Back_And\\FundoBiblico.Aplication\\FundoBiblico.Aplication.csproj": {
-              "projectPath": "C:\\Users\\joaog\\Documents\\CCB\\Fundo_Biblico_Back_And\\FundoBiblico.Aplication\\FundoBiblico.Aplication.csproj"
+            "C:\\Users\\Rafael\\Documents\\GitHub\\Fundo_Biblico_Back_And\\FundoBiblico.Aplication\\FundoBiblico.Aplication.csproj": {
+              "projectPath": "C:\\Users\\Rafael\\Documents\\GitHub\\Fundo_Biblico_Back_And\\FundoBiblico.Aplication\\FundoBiblico.Aplication.csproj"
             },
-            "C:\\Users\\joaog\\Documents\\CCB\\Fundo_Biblico_Back_And\\FundoBiblico.Dominio\\FundoBiblico.Dominio.csproj": {
-              "projectPath": "C:\\Users\\joaog\\Documents\\CCB\\Fundo_Biblico_Back_And\\FundoBiblico.Dominio\\FundoBiblico.Dominio.csproj"
+            "C:\\Users\\Rafael\\Documents\\GitHub\\Fundo_Biblico_Back_And\\FundoBiblico.Dominio\\FundoBiblico.Dominio.csproj": {
+              "projectPath": "C:\\Users\\Rafael\\Documents\\GitHub\\Fundo_Biblico_Back_And\\FundoBiblico.Dominio\\FundoBiblico.Dominio.csproj"
             },
-            "C:\\Users\\joaog\\Documents\\CCB\\Fundo_Biblico_Back_And\\FundoBiblico.Repository\\FundoBiblico.Repository.csproj": {
-              "projectPath": "C:\\Users\\joaog\\Documents\\CCB\\Fundo_Biblico_Back_And\\FundoBiblico.Repository\\FundoBiblico.Repository.csproj"
+            "C:\\Users\\Rafael\\Documents\\GitHub\\Fundo_Biblico_Back_And\\FundoBiblico.Repository\\FundoBiblico.Repository.csproj": {
+              "projectPath": "C:\\Users\\Rafael\\Documents\\GitHub\\Fundo_Biblico_Back_And\\FundoBiblico.Repository\\FundoBiblico.Repository.csproj"
             }
           }
         }
@@ -3432,6 +3432,11 @@
         "warnAsError": [
           "NU1605"
         ]
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "direct"
       }
     },
     "frameworks": {
@@ -3467,7 +3472,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.201/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

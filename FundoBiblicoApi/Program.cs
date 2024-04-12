@@ -16,16 +16,20 @@ builder.Services.AddInfrastuctureAPi(builder.Configuration);
 //Dependency Injector
 builder.Services.AddClassesMatchingInterfaces(nameof(FundoBiblico));
 
-builder.Services.AddControllers();
-builder.Services.AddSwaggerGen(c =>
-{
-    c.SwaggerDoc("v1", new OpenApiInfo { Title = "Fundo Biblico Api", Version = "v1" });
-});
+//Swagger
+builder.Services.RegisterSwagger();
+
+//builder.Services.AddControllers();
+//builder.Services.AddSwaggerGen(c =>
+//{
+//    c.SwaggerDoc("v1", new OpenApiInfo { Title = "Fundo Biblico Api", Version = "v1" });
+//});
 var app = builder.Build();
 
-if (!app.Environment.IsDevelopment())
+if (app.Environment.IsDevelopment())
 {
     app.UseDeveloperExceptionPage();
+    app.UseSwaggerConfiguration();
 }
 else
 {
@@ -45,11 +49,11 @@ app.UseEndpoints(endpoints =>
     endpoints.MapControllers();
 }); // UseEndpoints() deve ser chamado antes de app.Run()
 
-app.UseSwagger();
-app.UseSwaggerUI(c =>
-{
-    c.SwaggerEndpoint("/swagger/v1/swagger.json", "Fundo Biblico Api");
-    c.RoutePrefix = string.Empty;
-});
+//app.UseSwagger();
+//app.UseSwaggerUI(c =>
+//{
+//    c.SwaggerEndpoint("/swagger/v1/swagger.json", "Fundo Biblico Api");
+//    c.RoutePrefix = string.Empty;
+//});
 
 app.Run();

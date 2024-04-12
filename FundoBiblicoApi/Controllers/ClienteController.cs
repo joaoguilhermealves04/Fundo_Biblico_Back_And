@@ -2,10 +2,10 @@
 
 namespace FundoBiblicoApi.Controllers
 {
-    [Route("api/[controller]")]
-    [ApiController]
+    [Route("api/cliente")]
     public class ClienteController : Controller
     {
+        [HttpGet]
         public IActionResult Index()
         {
             return View();

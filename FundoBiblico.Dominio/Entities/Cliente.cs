@@ -1,4 +1,5 @@
-﻿using FundoBiblico.Dominio.Entity.EntitysBase;
+﻿using FundoBiblico.Dominio.Entities;
+using FundoBiblico.Dominio.Entity.EntitysBase;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,6 +15,8 @@ namespace FundoBiblico.Dominio.Entity
 
         public Guid IngrejaId { get; set; }
         public Igreja IgrejaPertencente { get; private set; }
+
+        public List<Compra> Compras { get; private set; }
 
         private Cliente(){}
 
@@ -35,7 +38,7 @@ namespace FundoBiblico.Dominio.Entity
 
         private void SetNome(string nome)
         {
-            if (nome is null)
+            if (string.IsNullOrEmpty(nome))
                 throw new ArgumentException("Por favor! Preencha o nome");
 
             Nome = nome;

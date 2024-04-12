@@ -4,8 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace FundoBiblicoApi.Controllers
 {
-    [Route("api/[controller]")]
-    [ApiController]
+    [Route("api/igreja")]
     public class IgrejaController : Controller
     {
         private readonly IIgrejaServicos _igrejaServicos;
