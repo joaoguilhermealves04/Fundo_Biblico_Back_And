@@ -7,9 +7,9 @@ namespace FundoBiblico.Repository.Repository
     public class RepositoryBase<TEntity> : IRepositoryBase<TEntity> where TEntity : class
     {
         private readonly FundoBiblicoContext _context;
-        public RepositoryBase( FundoBiblicoContext biblicoContext)
+        public RepositoryBase(FundoBiblicoContext biblicoContext)
         {
-           _context= biblicoContext;
+            _context = biblicoContext;
         }
 
         public async Task Adicionar(TEntity entity)
@@ -29,9 +29,9 @@ namespace FundoBiblico.Repository.Repository
             _context?.Dispose();
         }
 
-        public  async Task<TEntity> ObterPorId(Guid? id)
+        public async Task<TEntity> ObterPorId(Guid? id)
         {
-            return await _context.Set<TEntity>().FindAsync(id);           
+            return await _context.Set<TEntity>().FindAsync(id);
         }
 
         public async Task<IEnumerable<TEntity>> ObterTodos()

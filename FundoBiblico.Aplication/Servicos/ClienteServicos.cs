@@ -14,7 +14,7 @@ namespace FundoBiblico.Aplication.Servicos
         {
             _clienteRepositroy = clienteRepositroy;
             _context = fundoBiblicoContext;
-        }       
+        }
 
         public async Task CadastroCliente(ClienteAddEditarModel clienteModel)
         {
@@ -33,11 +33,11 @@ namespace FundoBiblico.Aplication.Servicos
         {
             try
             {
-                var clienteEntity =  _clienteRepositroy.ObterPorId(clienteModel.Id);
+                var clienteEntity = await _clienteRepositroy.ObterPorId(clienteModel.Id);
 
-                clienteEntity.Result.AtualizarEntidadeCliente(clienteModel.Nome);
+                clienteEntity.AtualizarEntidadeCliente(clienteModel.Nome);
 
-                _clienteRepositroy.Atualizar(clienteEntity.Result);
+                _clienteRepositroy.Atualizar(clienteEntity);
             }
             catch (Exception ex)
             {
@@ -52,14 +52,14 @@ namespace FundoBiblico.Aplication.Servicos
                 if (id == null)
                     throw new InvalidOperationException("Id não pode ser nulo.");
 
-                var unicoCliente =  _clienteRepositroy.ObterPorId(id);
+                var unicoCliente = await _clienteRepositroy.ObterPorId(id);
 
                 var InformacaoDoCliente = new ClienteModel
                 {
-                    Id = unicoCliente.Result.Id,
-                    Nome = unicoCliente.Result.Nome,
-                    DataCadastro = unicoCliente.Result.DataCadastro,
-                    NumeroFilaEspera = unicoCliente.Result.NumeroFilaEspera
+                    Id = unicoCliente.Id,
+                    Nome = unicoCliente.Nome,
+                    DataCadastro = unicoCliente.DataCadastro,
+                    NumeroFilaEspera = unicoCliente.NumeroFilaEspera
                 };
 
                 return InformacaoDoCliente;

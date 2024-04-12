@@ -20,14 +20,14 @@ namespace FundoBiblico.Aplication.Servicos
         {
             try
             {
-                var igreja = _igrejaRepository.ObterPorId(igrejaModel.Id);
+                var igreja = await _igrejaRepository.ObterPorId(igrejaModel.Id);
 
                 if (igreja is null)
                     throw new Exception("Igreja não encontrada");
 
-                igreja.Result.AtualizarEntidadeIgreja(igrejaModel.Nome, igrejaModel.UF, igrejaModel.Setor);
+                igreja.AtualizarEntidadeIgreja(igrejaModel.Nome, igrejaModel.UF, igrejaModel.Setor);
 
-                _igrejaRepository.Atualizar(igreja.Result);
+                _igrejaRepository.Atualizar(igreja);
             }
             catch (Exception ex)
             {
@@ -93,7 +93,7 @@ namespace FundoBiblico.Aplication.Servicos
                 }
                 var igreja = await _igrejaRepository.ObterPorId(id.Value);
 
-                var resultado = new IgrejaModel
+                return new IgrejaModel
                 {
                     Id = igreja.Id,
                     Nome = igreja.Nome,
@@ -101,8 +101,6 @@ namespace FundoBiblico.Aplication.Servicos
                     Setor = igreja.Setor,
                     DataCadastro = igreja.DataCadastro
                 };
-
-                return resultado;
 
             }
             catch (Exception ex)
