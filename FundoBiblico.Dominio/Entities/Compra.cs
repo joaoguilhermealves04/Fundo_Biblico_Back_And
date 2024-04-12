@@ -13,20 +13,16 @@ namespace FundoBiblico.Dominio.Entities
     {
         public Guid ClienteId { get; set; }
         public Cliente Cliente { get; private set; }
+        public Guid Igreja { get; set; }
+        public Igreja igreja { get; set; }
         public List<Produto> Produtos { get; private set; }
         public decimal ValorTotal { get; private set; }
-        public decimal Troco { get; private set; }
 
 
         public void Comprar(Cliente cliente, List<Produto> produtos)
         {
             Cliente = cliente;
             Produtos = produtos;
-        }
-
-        public decimal CalculaTroco(decimal valorTotal, decimal valorQueIraPagar)
-        {
-            return valorQueIraPagar - valorTotal;
         }
 
     }

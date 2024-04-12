@@ -26,14 +26,14 @@ namespace FundoBiblico.Aplication.Servicos
 
             try
             {
-                var obterProduto = await _produtoRepository.ObterPorId(produto.id);
+                var obterProduto =  _produtoRepository.ObterPorId(produto.id);
                 if (obterProduto is null)
                     throw new Exception("produto não encontrada");
 
-                obterProduto.AtualizarEntidadeProduto(produto.Nome, produto.Descricao, produto.Preco, 
-                    produto.QuantidadeEstoque, produto.IgrejaPertencente);
+                obterProduto.Result.AtualizarEntidadeProduto(produto.Nome, produto.Descricao,produto.Foto ,produto.Preco, 
+                    produto.QuantidadeEstoque);
 
-                _produtoRepository.Atualizar(obterProduto);
+                _produtoRepository.Atualizar(obterProduto.Result);
             }
             catch (Exception ex)
             {
@@ -46,13 +46,7 @@ namespace FundoBiblico.Aplication.Servicos
         {
             try
             {
-                var validarIgreja = _vailidar.IgrejaExiste(produto.IgrejaPertencente.Nome);
-                if (validarIgreja == false)
-                {
-                    throw new Exception("Igreja não encontrada na base de Dados.");
-                }
-
-                var produtoEntity = new Produto(produto.Nome, produto.Descricao, produto.Preco, produto.QuantidadeEstoque);
+                var produtoEntity = new Produto(produto.Nome, produto.Descricao,produto.Foto,produto.Preco, produto.QuantidadeEstoque);
                 await _produtoRepository.Adicionar(produtoEntity);
             }
             catch (Exception ex)
@@ -68,16 +62,15 @@ namespace FundoBiblico.Aplication.Servicos
                 if (id == null)
                     throw new ArgumentNullException("Id não pode ser nulo.");
 
-                var produto = await _produtoRepository.ObterPorId(id);
+                var produto =  _produtoRepository.ObterPorId(id);
 
                 var resultado = new ProdutoModel
                 {
-                    Id = produto.Id,
-                    Nome = produto.Nome,
-                    Descricao = produto.Descricao,
-                    Preco = produto.Preco,
-                    QuantidadeEstoque = produto.QuantidadeEstoque,
-                    IgrejaPertencente = produto.IgrejaPertencente
+                    Id = produto.Result.Id,
+                    Nome = produto.Result.Nome,
+                    Descricao = produto.Result.Descricao,
+                    Preco = produto.Result.Preco,
+                    QuantidadeEstoque = produto.Result.QuantidadeEstoque
                 };
 
                 return resultado;
@@ -107,7 +100,6 @@ namespace FundoBiblico.Aplication.Servicos
                         Descricao = p.Descricao,
                         Preco = p.Preco,
                         QuantidadeEstoque = p.QuantidadeEstoque,
-                        IgrejaPertencente = p.IgrejaPertencente
                     };
 
                     trazerProdutos.Add(produtosRetorno);

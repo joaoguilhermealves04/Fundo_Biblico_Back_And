@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("FundoBiblico.Aplication")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a3eeb09da955812fc78a1496b5b19336fce8a476")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+88d2617751555212c0aa304bfb30a975d604ab33")]
 [assembly: System.Reflection.AssemblyProductAttribute("FundoBiblico.Aplication")]
 [assembly: System.Reflection.AssemblyTitleAttribute("FundoBiblico.Aplication")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

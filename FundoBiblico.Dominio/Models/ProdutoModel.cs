@@ -11,12 +11,12 @@ namespace FundoBiblico.Dominio.Models
     public class ProdutoModel
     {
         public Guid Id { get; set; }
-        [MaxLength(15)]
+        [MaxLength(150)]
         public string Nome { get; set; }
         [MaxLength(150)]
         public string Descricao { get;  set; }
-        public decimal Preco { get;  set; }
+        public string Foto { get; set; }
+        public double Preco { get;  set; }
         public int QuantidadeEstoque { get;  set; }
-        public Igreja IgrejaPertencente { get;  set; }
     }
 }

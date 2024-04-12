@@ -25,7 +25,7 @@ namespace FundoBiblicoApi.Controllers
         }
 
         [HttpPost("Adicionar")]
-        public IActionResult AdicionarIgreja(IgrejaAddEditarModel igrejaAddEditar)
+        public IActionResult AdicionarIgreja([FromBody] IgrejaAddEditarModel igrejaAddEditar)
         {
             var igreja = _igrejaServicos.CadastroIgreja(igrejaAddEditar);
             if (igreja.Exception != null)
@@ -37,7 +37,7 @@ namespace FundoBiblicoApi.Controllers
         }
 
         [HttpPut("Atualizar")]
-        public IActionResult Atualizar(IgrejaAddEditarModel igrejaAddEditar)
+        public IActionResult Atualizar([FromBody] IgrejaAddEditarModel igrejaAddEditar)
         {
             var igreja = _igrejaServicos.Atualizar(igrejaAddEditar);
             if (igreja.Exception != null)

@@ -14,13 +14,13 @@ namespace FundoBiblico.Aplication.Servicos
         {
             _clienteRepositroy = clienteRepositroy;
             _context = fundoBiblicoContext;
-        }       
+        }
 
         public async Task CadastroCliente(ClienteAddEditarModel clienteModel)
         {
             try
             {
-                var clienteEntity = new Cliente(clienteModel.Nome, clienteModel.IgrejaPertencente);
+                var clienteEntity = new Cliente(clienteModel.Nome);
                 await _clienteRepositroy.Adicionar(clienteEntity);
             }
             catch (Exception ex)
@@ -35,7 +35,7 @@ namespace FundoBiblico.Aplication.Servicos
             {
                 var clienteEntity = await _clienteRepositroy.ObterPorId(clienteModel.Id);
 
-                clienteEntity.AtualizarEntidadeCliente(clienteModel.Nome, clienteModel.IgrejaPertencente);
+                clienteEntity.AtualizarEntidadeCliente(clienteModel.Nome);
 
                 _clienteRepositroy.Atualizar(clienteEntity);
             }
@@ -58,7 +58,6 @@ namespace FundoBiblico.Aplication.Servicos
                 {
                     Id = unicoCliente.Id,
                     Nome = unicoCliente.Nome,
-                    IgrejaPertencente = unicoCliente.IgrejaPertencente,
                     DataCadastro = unicoCliente.DataCadastro,
                     NumeroFilaEspera = unicoCliente.NumeroFilaEspera
                 };
@@ -85,7 +84,6 @@ namespace FundoBiblico.Aplication.Servicos
                     {
                         Id = c.Id,
                         Nome = c.Nome,
-                        IgrejaPertencente = c.IgrejaPertencente,
                         DataCadastro = c.DataCadastro,
                         NumeroFilaEspera = c.NumeroFilaEspera
                     };

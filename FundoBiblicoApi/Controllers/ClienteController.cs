@@ -51,10 +51,10 @@ namespace FundoBiblicoApi.Controllers
         {
             var ObterCliente = _clienteServicos.ObterCliente(id);
 
-            if (ObterCliente == null)
-                return BadRequest();
+            if (ObterCliente.Exception != null)
+                return BadRequest(ObterCliente.Exception);
 
-            return Ok(ObterCliente);
+            return Ok(ObterCliente.Result);
         }
     }
 }

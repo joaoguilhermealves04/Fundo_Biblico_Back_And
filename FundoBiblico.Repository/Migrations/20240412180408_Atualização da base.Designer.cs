@@ -4,6 +4,7 @@ using FundoBiblico.Repository.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace FundoBiblico.Repository.Migrations
 {
     [DbContext(typeof(FundoBiblicoContext))]
-    partial class FundoBiblicoContextModelSnapshot : ModelSnapshot
+    [Migration("20240412180408_Atualização da base")]
+    partial class Atualizaçãodabase
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -142,16 +145,12 @@ namespace FundoBiblico.Repository.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("Foto")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<string>("Nome")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<double>("Preco")
-                        .HasColumnType("float");
+                    b.Property<decimal>("Preco")
+                        .HasColumnType("decimal(18,2)");
 
                     b.Property<int>("QuantidadeEstoque")
                         .HasColumnType("int");

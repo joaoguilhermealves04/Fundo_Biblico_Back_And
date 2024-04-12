@@ -5,24 +5,24 @@
 namespace FundoBiblico.Repository.Migrations
 {
     /// <inheritdoc />
-    public partial class aTUALIZARPRODUTOS : Migration
+    public partial class Alteraçãonabase : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
         {
-            migrationBuilder.AddColumn<int>(
-                name: "QuantidadeEstoque",
+            migrationBuilder.AddColumn<string>(
+                name: "Foto",
                 table: "Produtos",
-                type: "int",
+                type: "nvarchar(max)",
                 nullable: false,
-                defaultValue: 0);
+                defaultValue: "");
         }
 
         /// <inheritdoc />
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropColumn(
-                name: "QuantidadeEstoque",
+                name: "Foto",
                 table: "Produtos");
         }
     }
