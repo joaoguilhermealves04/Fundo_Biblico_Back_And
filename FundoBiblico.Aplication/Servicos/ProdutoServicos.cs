@@ -46,12 +46,6 @@ namespace FundoBiblico.Aplication.Servicos
         {
             try
             {
-                var validarIgreja = _vailidar.IgrejaExiste(produto.IgrejaPertencente.Nome);
-                if (validarIgreja == false)
-                {
-                    throw new Exception("Igreja não encontrada na base de Dados.");
-                }
-
                 var produtoEntity = new Produto(produto.Nome, produto.Descricao, produto.Preco, produto.QuantidadeEstoque);
                 await _produtoRepository.Adicionar(produtoEntity);
             }
