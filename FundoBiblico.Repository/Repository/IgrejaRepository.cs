@@ -44,5 +44,10 @@ namespace FundoBiblico.Repository.Repository
             _context.Remove(igreja);
             _context.SaveChanges();
         }
+
+        public void Dispose()
+        {
+            _context.Dispose();
+        }
     }
 }

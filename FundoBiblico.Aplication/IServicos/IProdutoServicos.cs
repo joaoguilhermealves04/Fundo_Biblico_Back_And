@@ -10,5 +10,6 @@ namespace FundoBiblico.Aplication.IServicos
         Task<IEnumerable<ProdutoModel>> ObterProdutos();
         Task<ProdutoModel> ObterProduto(Guid id);
         Task Remover(Guid id);
+        Task<ProdutoModel> ObterProdutoPorNome(string nome);
     }
 }

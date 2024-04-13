@@ -39,5 +39,10 @@ namespace FundoBiblico.Repository.Repository
              _context.Remove(compra);
              _context.SaveChanges();
         }
+
+        public void Dispose()
+        {
+            _context.Dispose();
+        }
     }
 }
