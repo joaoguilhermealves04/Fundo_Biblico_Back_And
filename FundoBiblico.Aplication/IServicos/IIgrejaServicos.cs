@@ -1,4 +1,4 @@
-﻿using FundoBiblico.Dominio.Models;
+﻿using FundoBiblico.Aplication.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,6 +13,6 @@ namespace FundoBiblico.Aplication.IServicos
         Task Atualizar(IgrejaAddEditarModel igreja);
         Task<IEnumerable<IgrejaModel>> ObterIgrejas();
         Task<IgrejaModel> ObterIgreja(Guid? id);
-        Task Remover(Guid? id);
+        Task Remover(Guid id);
     }
 }

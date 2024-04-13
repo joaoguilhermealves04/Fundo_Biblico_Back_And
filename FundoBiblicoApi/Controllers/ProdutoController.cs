@@ -1,5 +1,5 @@
 ﻿using FundoBiblico.Aplication.IServicos;
-using FundoBiblico.Dominio.Models;
+using FundoBiblico.Aplication.Models;
 using Microsoft.AspNetCore.Mvc;
 
 namespace FundoBiblicoApi.Controllers
@@ -14,7 +14,7 @@ namespace FundoBiblicoApi.Controllers
         }
 
         [HttpPost("Cadastrar")]
-        public IActionResult Cadastrar(ProdutoModel produto)
+        public IActionResult Cadastrar([FromBody] ProdutoModel produto)
         {
             var produtoCadastar = _produtoServicos.CadastroProduto(produto);
             if (produto == null)
@@ -24,7 +24,7 @@ namespace FundoBiblicoApi.Controllers
         }
 
         [HttpPut("Atualizar")]
-        public IActionResult Atualizar(ProdutoAddEditarModel produtoAddEditar)
+        public IActionResult Atualizar([FromBody] ProdutoAddEditarModel produtoAddEditar)
         {
             var produtoAtulizar = _produtoServicos.Atualizar(produtoAddEditar);
             if (produtoAtulizar.Exception != null)

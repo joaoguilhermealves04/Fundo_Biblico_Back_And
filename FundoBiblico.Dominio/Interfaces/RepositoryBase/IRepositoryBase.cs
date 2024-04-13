@@ -8,7 +8,7 @@ namespace FundoBiblico.Dominio.Interfaces.RepositoryBase
 {
     public interface IRepositoryBase<TEntity>:IDisposable where TEntity :class
     {
-        Task<TEntity> ObterPorId(Guid? id);
+        Task<TEntity> ObterPorId(Guid id);
         Task Adicionar(TEntity entity);
         void Atualizar (TEntity entity);
         Task Remover(TEntity entity);

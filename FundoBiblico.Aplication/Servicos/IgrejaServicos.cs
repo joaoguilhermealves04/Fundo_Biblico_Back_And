@@ -1,8 +1,8 @@
 ﻿using FundoBiblico.Aplication.Helper;
 using FundoBiblico.Aplication.IServicos;
+using FundoBiblico.Aplication.Models;
 using FundoBiblico.Dominio.Entity;
 using FundoBiblico.Dominio.Interfaces;
-using FundoBiblico.Dominio.Models;
 
 namespace FundoBiblico.Aplication.Servicos
 {
@@ -110,7 +110,7 @@ namespace FundoBiblico.Aplication.Servicos
             }
         }
 
-        public Task Remover(Guid? id)
+        public Task Remover(Guid id)
         {
             try
             {

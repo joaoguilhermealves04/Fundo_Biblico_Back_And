@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace FundoBiblico.Dominio.Models
+namespace FundoBiblico.Aplication.Models
 {
     public class IgrejaAddEditarModel
     {

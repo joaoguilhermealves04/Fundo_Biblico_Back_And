@@ -1,6 +1,5 @@
 ﻿using FundoBiblico.Dominio.Entity;
 using FundoBiblico.Dominio.Interfaces;
-using FundoBiblico.Repository.Data;
 
 namespace FundoBiblico.Repository.Repository
 {

@@ -1,5 +1,5 @@
 ﻿using FundoBiblico.Aplication.IServicos;
-using FundoBiblico.Dominio.Models;
+using FundoBiblico.Aplication.Models;
 using Microsoft.AspNetCore.Mvc;
 
 namespace FundoBiblicoApi.Controllers

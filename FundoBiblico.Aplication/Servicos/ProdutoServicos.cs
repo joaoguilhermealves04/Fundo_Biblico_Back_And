@@ -1,8 +1,8 @@
 ﻿using FundoBiblico.Aplication.Helper;
 using FundoBiblico.Aplication.IServicos;
+using FundoBiblico.Aplication.Models;
 using FundoBiblico.Dominio.Entity;
 using FundoBiblico.Dominio.Interfaces;
-using FundoBiblico.Dominio.Models;
 using FundoBiblico.Repository.Repository;
 using System;
 using System.Collections.Generic;
@@ -55,7 +55,7 @@ namespace FundoBiblico.Aplication.Servicos
             }
         }
 
-        public async Task<ProdutoModel> ObterProduto(Guid? id)
+        public async Task<ProdutoModel> ObterProduto(Guid id)
         {
             try
             {
@@ -114,7 +114,7 @@ namespace FundoBiblico.Aplication.Servicos
             }
         }
 
-        public Task Remover(Guid? id)
+        public Task Remover(Guid id)
         {
             try
             {

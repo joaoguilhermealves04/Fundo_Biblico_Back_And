@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("FundoBiblico.Infra.Ioc")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+88d2617751555212c0aa304bfb30a975d604ab33")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+52c95e2060625c7969836279fd0f6bbae21848c2")]
 [assembly: System.Reflection.AssemblyProductAttribute("FundoBiblico.Infra.Ioc")]
 [assembly: System.Reflection.AssemblyTitleAttribute("FundoBiblico.Infra.Ioc")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

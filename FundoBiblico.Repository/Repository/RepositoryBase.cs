@@ -1,5 +1,4 @@
 ﻿using FundoBiblico.Dominio.Interfaces.RepositoryBase;
-using FundoBiblico.Repository.Data;
 using Microsoft.EntityFrameworkCore;
 
 namespace FundoBiblico.Repository.Repository
@@ -29,7 +28,7 @@ namespace FundoBiblico.Repository.Repository
             _context?.Dispose();
         }
 
-        public async Task<TEntity> ObterPorId(Guid? id)
+        public async Task<TEntity> ObterPorId(Guid id)
         {
             return await _context.Set<TEntity>().FindAsync(id);
         }

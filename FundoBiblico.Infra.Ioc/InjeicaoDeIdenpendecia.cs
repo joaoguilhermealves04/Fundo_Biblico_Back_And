@@ -3,7 +3,6 @@ using FundoBiblico.Aplication.IServicos;
 using FundoBiblico.Aplication.Servicos;
 using FundoBiblico.Dominio.Interfaces;
 using FundoBiblico.Dominio.Interfaces.RepositoryBase;
-using FundoBiblico.Repository.Data;
 using FundoBiblico.Repository.Repository;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
@@ -27,7 +26,7 @@ namespace FundoBiblico.Infra.Ioc
             // Repositorios 
             services.AddScoped<IClienteRepositroy, ClienteRepository>();
             services.AddScoped<IIgrejaRepository, IgrejaRepository>();
-            services.AddScoped(typeof(IRepositoryBase<>), typeof(RepositoryBase<>));
+            //services.AddScoped(typeof(IRepositoryBase<>), typeof(RepositoryBase<>));
             // Serviços
             services.AddScoped<IClienteServicos, ClienteServicos>();
             services.AddScoped<IIgrejaServicos, IgrejaServicos>();

@@ -1,5 +1,5 @@
-﻿using FundoBiblico.Dominio.Entity;
-using FundoBiblico.Dominio.Models;
+﻿using FundoBiblico.Aplication.Models;
+using FundoBiblico.Dominio.Entity;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,6 +13,6 @@ namespace FundoBiblico.Aplication.IServicos
         Task CadastroCliente(ClienteAddEditarModel cliente);
         Task AtualizarCliente(ClienteAddEditarModel cliente);
         Task<IEnumerable<ClienteModel>> ObterClientes();
-        Task<ClienteModel> ObterCliente(Guid? id);
+        Task<ClienteModel> ObterCliente(Guid id);
     }
 }

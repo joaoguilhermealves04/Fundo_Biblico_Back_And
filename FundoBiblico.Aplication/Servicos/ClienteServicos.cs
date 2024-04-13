@@ -1,8 +1,7 @@
 ﻿using FundoBiblico.Aplication.IServicos;
+using FundoBiblico.Aplication.Models;
 using FundoBiblico.Dominio.Entity;
 using FundoBiblico.Dominio.Interfaces;
-using FundoBiblico.Dominio.Models;
-using FundoBiblico.Repository.Data;
 
 namespace FundoBiblico.Aplication.Servicos
 {
@@ -45,7 +44,7 @@ namespace FundoBiblico.Aplication.Servicos
             }
         }
 
-        public async Task<ClienteModel> ObterCliente(Guid? id)
+        public async Task<ClienteModel> ObterCliente(Guid id)
         {
             try
             {
@@ -58,8 +57,7 @@ namespace FundoBiblico.Aplication.Servicos
                 {
                     Id = unicoCliente.Id,
                     Nome = unicoCliente.Nome,
-                    DataCadastro = unicoCliente.DataCadastro,
-                    NumeroFilaEspera = unicoCliente.NumeroFilaEspera
+                    DataCadastro = unicoCliente.DataCadastro
                 };
 
                 return InformacaoDoCliente;
@@ -84,8 +82,7 @@ namespace FundoBiblico.Aplication.Servicos
                     {
                         Id = c.Id,
                         Nome = c.Nome,
-                        DataCadastro = c.DataCadastro,
-                        NumeroFilaEspera = c.NumeroFilaEspera
+                        DataCadastro = c.DataCadastro
                     };
 
                     trazerCliente.Add(clienteRetorno);
