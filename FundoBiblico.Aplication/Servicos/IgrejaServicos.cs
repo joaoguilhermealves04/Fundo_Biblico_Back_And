@@ -124,5 +124,39 @@ namespace FundoBiblico.Aplication.Servicos
                 throw new Exception("Erro ao remover a igreja.", ex);
             }
         }
+
+        public async Task<IgrejaModel> ObterIgrejaPorNome(string nome)
+        {
+            try
+            {
+                if (string.IsNullOrEmpty(nome))
+                {
+                    throw new Exception("O Nome da Igreja não pode ser nulo, Por favor digite um nome.");
+
+                }
+
+                var igreja = await _igrejaRepository.ObterPorNome(nome);
+
+                if( igreja == null)
+                {
+                    throw new Exception("Igreja não existe na base de Dados!");
+                }
+
+                return new IgrejaModel
+                {
+                    Id = igreja.Id,
+                    Nome = igreja.Nome,
+                    UF = igreja.UF,
+                    Setor = igreja.Setor,
+                    DataCadastro = igreja.DataCadastro
+                };
+
+            }
+            catch (Exception ex)
+            {
+
+                throw new Exception($"Erro ao consulta igreja pelo nome {nome}",ex);
+            }
+        }
     }
 }

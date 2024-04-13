@@ -1,14 +1,14 @@
 ﻿using FundoBiblico.Dominio.Entity;
-using FundoBiblico.Dominio.Interfaces.RepositoryBase;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace FundoBiblico.Dominio.Interfaces
 {
-    public interface IIgrejaRepository : IRepositoryBase<Igreja>
+    public interface IIgrejaRepository
     {
+        Task<Igreja> ObterPorId(Guid id);
+        Task Adicionar(Igreja igreja);
+        void Atualizar(Igreja igreja);
+        Task Remover(Igreja igreja);
+        Task<IEnumerable<Igreja>> ObterTodos();
+        Task<Igreja>ObterPorNome (string nome); 
     }
 }

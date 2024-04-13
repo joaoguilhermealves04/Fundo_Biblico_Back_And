@@ -1,14 +1,13 @@
 ﻿using FundoBiblico.Dominio.Entity;
-using FundoBiblico.Dominio.Interfaces.RepositoryBase;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace FundoBiblico.Dominio.Interfaces
 {
-    public interface IClienteRepositroy : IRepositoryBase<Cliente>
+    public interface IClienteRepositroy 
     {
+        Task<Cliente> ObterPorId(Guid id);
+        Task Adicionar(Cliente cliente);
+        void Atualizar(Cliente cliente);
+        Task Remover(Cliente cliente);
+        Task<IEnumerable<Cliente>> ObterTodos();
     }
 }

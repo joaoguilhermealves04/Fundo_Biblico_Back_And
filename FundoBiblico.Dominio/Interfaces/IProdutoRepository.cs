@@ -1,15 +1,14 @@
 ﻿using FundoBiblico.Dominio.Entity;
-using FundoBiblico.Dominio.Interfaces.RepositoryBase;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace FundoBiblico.Dominio.Interfaces
 {
-    public interface IProdutoRepository : IRepositoryBase<Produto>
+    public interface IProdutoRepository 
     {
+        Task<Produto> ObterPorId(Guid id);
+        Task Adicionar(Produto produto);
+        void Atualizar(Produto produto);
+        Task Remover(Produto produto);
+        Task<IEnumerable<Produto>> ObterTodos();
         Task<Produto> ObterPorNome(string? Nome);
     }
 }

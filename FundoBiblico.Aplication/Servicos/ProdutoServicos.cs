@@ -83,6 +83,39 @@ namespace FundoBiblico.Aplication.Servicos
 
         }
 
+        public async Task<ProdutoModel> ObterProdutoPorNome(string nome)
+        {
+            try
+            {
+                if (string.IsNullOrEmpty(nome))
+                {
+                    throw new Exception("Por favor Digite um Nome de um produto.");
+                }
+
+                var produto = await _produtoRepository.ObterPorNome(nome);
+
+                if (produto == null)
+                {
+                    throw new Exception("Nenhum produto encontrado com o nome fornecido.");
+                }
+
+                return  new ProdutoModel
+                {
+                    Id = produto.Id,
+                    Nome = produto.Nome,
+                    Descricao = produto.Descricao,
+                    Preco = produto.Preco,
+                    QuantidadeEstoque = produto.QuantidadeEstoque,
+                };
+
+            }
+            catch (Exception ex)
+            {
+
+                throw new Exception($"Erro em consultar produtor pelo {nome}",ex);
+            }
+        }
+
         public async Task<IEnumerable<ProdutoModel>> ObterProdutos()
         {
             try
