@@ -3,12 +3,6 @@ using FundoBiblico.Aplication.IServicos;
 using FundoBiblico.Aplication.Models;
 using FundoBiblico.Dominio.Entity;
 using FundoBiblico.Dominio.Interfaces;
-using FundoBiblico.Repository.Repository;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace FundoBiblico.Aplication.Servicos
 {
