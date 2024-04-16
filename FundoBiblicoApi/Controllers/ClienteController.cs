@@ -47,14 +47,25 @@ namespace FundoBiblicoApi.Controllers
         }
 
         [HttpGet("get/{id}")]
-        public IActionResult ObterCliente(Guid id)
+        public async Task<IActionResult> ObterCliente(Guid id)
         {
-            var ObterCliente = _clienteServicos.ObterCliente(id);
+            var obterCliente = await _clienteServicos.ObterCliente(id);
 
-            if (ObterCliente.Exception != null)
-                return BadRequest(ObterCliente.Exception);
+            if (obterCliente == null)
+                return BadRequest();
 
-            return Ok(ObterCliente.Result);
+            return Ok(obterCliente);
+        }
+
+        [HttpDelete("delete/{id}")]
+        public async Task<IActionResult> RemoverCliente(Guid id)
+        {
+            var resutado = _clienteServicos.Remover(id);
+
+            if(resutado.Exception != null)
+                return Ok(resutado.Exception);
+
+            return NoContent();
         }
     }
 }

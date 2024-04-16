@@ -36,7 +36,7 @@ namespace FundoBiblico.Aplication.Servicos
             }
         }
 
-        public async Task CadastroProduto(ProdutoModel produto)
+        public async Task CadastroProduto(ProdutoAddEditarModel produto)
         {
             try
             {
@@ -56,15 +56,16 @@ namespace FundoBiblico.Aplication.Servicos
                 if (id == null)
                     throw new ArgumentNullException("Id não pode ser nulo.");
 
-                var produto =  _produtoRepository.ObterPorId(id);
+                var produto = await _produtoRepository.ObterPorId(id);
 
                 var resultado = new ProdutoModel
                 {
-                    Id = produto.Result.Id,
-                    Nome = produto.Result.Nome,
-                    Descricao = produto.Result.Descricao,
-                    Preco = produto.Result.Preco,
-                    QuantidadeEstoque = produto.Result.QuantidadeEstoque
+                    Id = produto.Id,
+                    Nome = produto.Nome,
+                    Descricao = produto.Descricao,
+                    Foto = produto.Foto,
+                    Preco = produto.Preco,
+                    QuantidadeEstoque = produto.QuantidadeEstoque
                 };
 
                 return resultado;
@@ -82,22 +83,19 @@ namespace FundoBiblico.Aplication.Servicos
             try
             {
                 if (string.IsNullOrEmpty(nome))
-                {
                     throw new Exception("Por favor Digite um Nome de um produto.");
-                }
-
+                
                 var produto = await _produtoRepository.ObterPorNome(nome);
 
                 if (produto == null)
-                {
                     throw new Exception("Nenhum produto encontrado com o nome fornecido.");
-                }
-
+                
                 return  new ProdutoModel
                 {
                     Id = produto.Id,
                     Nome = produto.Nome,
                     Descricao = produto.Descricao,
+                    Foto=produto.Foto,
                     Preco = produto.Preco,
                     QuantidadeEstoque = produto.QuantidadeEstoque,
                 };
@@ -125,6 +123,7 @@ namespace FundoBiblico.Aplication.Servicos
                         Id = p.Id,
                         Nome = p.Nome,
                         Descricao = p.Descricao,
+                        Foto = p.Foto,
                         Preco = p.Preco,
                         QuantidadeEstoque = p.QuantidadeEstoque,
                     };

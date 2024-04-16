@@ -95,5 +95,27 @@ namespace FundoBiblico.Aplication.Servicos
                 throw new Exception("Erro ao consultar no banco", ex);
             }
         }
+
+        public Task Remover(Guid id)
+        {
+            try
+            {
+                if (id == null)
+                    throw new ArgumentNullException("Id não pode ser nulo.");
+
+                var cliente = _clienteRepositroy.ObterPorId(id);
+                if (cliente == null)
+                    throw new Exception("Produto não encontrado");
+
+                _clienteRepositroy.Remover(cliente.Result);
+
+                return Task.CompletedTask;
+            }
+            catch (Exception ex)
+            {
+
+                throw new Exception("Problem em remover o cliente.",ex);
+            }
+        }
     }
 }

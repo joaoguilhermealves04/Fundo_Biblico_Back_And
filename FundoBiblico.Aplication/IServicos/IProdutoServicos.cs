@@ -5,7 +5,7 @@ namespace FundoBiblico.Aplication.IServicos
 {
     public interface IProdutoServicos
     {
-        Task CadastroProduto(ProdutoModel produto);
+        Task CadastroProduto(ProdutoAddEditarModel produto);
         Task Atualizar(ProdutoAddEditarModel produto);
         Task<IEnumerable<ProdutoModel>> ObterProdutos();
         Task<ProdutoModel> ObterProduto(Guid id);

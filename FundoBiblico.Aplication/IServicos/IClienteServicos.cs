@@ -14,5 +14,6 @@ namespace FundoBiblico.Aplication.IServicos
         Task AtualizarCliente(ClienteAddEditarModel cliente);
         Task<IEnumerable<ClienteModel>> ObterClientes();
         Task<ClienteModel> ObterCliente(Guid id);
+        Task Remover(Guid id);
     }
 }
