@@ -32,11 +32,11 @@ namespace FundoBiblico.Aplication.Servicos
         {
             try
             {
-                var clienteEntity = _clienteRepositroy.ObterPorId(clienteModel.Id);
+                var clienteEntity = await _clienteRepositroy.ObterPorId(clienteModel.Id);
 
-                clienteEntity.Result.AtualizarEntidadeCliente(clienteModel.Nome);
+                clienteEntity.AtualizarEntidadeCliente(clienteModel.Nome);
 
-                _clienteRepositroy.Atualizar(clienteEntity.Result);
+                _clienteRepositroy.Atualizar(clienteEntity);
             }
             catch (Exception ex)
             {

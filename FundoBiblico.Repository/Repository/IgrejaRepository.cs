@@ -26,17 +26,17 @@ namespace FundoBiblico.Repository.Repository
 
         public async Task<Igreja> ObterPorId(Guid id)
         {
-           return await _context.Set<Igreja>().FirstAsync(x => x.Id == id);
+           return await _context.Igrejas.FirstOrDefaultAsync(x => x.Id == id);
         }
 
         public async Task<Igreja> ObterPorNome(string nome)
         {
-            return await _context.Set<Igreja>().FirstOrDefaultAsync(x =>x.Nome == nome);
+            return await _context.Igrejas.FirstOrDefaultAsync(x =>x.Nome == nome);
         }
 
         public async Task<IEnumerable<Igreja>> ObterTodos()
         {
-            return await _context.Set<Igreja>().ToListAsync();
+            return await _context.Igrejas.ToListAsync();
         }
 
         public async Task Remover(Igreja igreja)

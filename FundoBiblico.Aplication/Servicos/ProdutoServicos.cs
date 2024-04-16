@@ -20,19 +20,19 @@ namespace FundoBiblico.Aplication.Servicos
 
             try
             {
-                var obterProduto =  _produtoRepository.ObterPorId(produto.id);
+                var obterProduto = await _produtoRepository.ObterPorId(produto.id);
                 if (obterProduto is null)
                     throw new Exception("produto não encontrada");
 
-                obterProduto.Result.AtualizarEntidadeProduto(produto.Nome, produto.Descricao,produto.Foto ,produto.Preco, 
+                obterProduto.AtualizarEntidadeProduto(produto.Nome, produto.Descricao, produto.Foto, produto.Preco,
                     produto.QuantidadeEstoque);
 
-                _produtoRepository.Atualizar(obterProduto.Result);
+                _produtoRepository.Atualizar(obterProduto);
             }
             catch (Exception ex)
             {
 
-                throw new Exception("Erro ao fazer atualização do produto.",ex);
+                throw new Exception("Erro ao fazer atualização do produto.", ex);
             }
         }
 
@@ -40,7 +40,7 @@ namespace FundoBiblico.Aplication.Servicos
         {
             try
             {
-                var produtoEntity = new Produto(produto.Nome, produto.Descricao,produto.Foto,produto.Preco, produto.QuantidadeEstoque);
+                var produtoEntity = new Produto(produto.Nome, produto.Descricao, produto.Foto, produto.Preco, produto.QuantidadeEstoque);
                 await _produtoRepository.Adicionar(produtoEntity);
             }
             catch (Exception ex)
@@ -73,7 +73,7 @@ namespace FundoBiblico.Aplication.Servicos
             catch (Exception ex)
             {
 
-                throw new Exception("Erro ao consultar no banco",ex);
+                throw new Exception("Erro ao consultar no banco", ex);
             }
 
         }
@@ -84,18 +84,18 @@ namespace FundoBiblico.Aplication.Servicos
             {
                 if (string.IsNullOrEmpty(nome))
                     throw new Exception("Por favor Digite um Nome de um produto.");
-                
+
                 var produto = await _produtoRepository.ObterPorNome(nome);
 
                 if (produto == null)
                     throw new Exception("Nenhum produto encontrado com o nome fornecido.");
-                
-                return  new ProdutoModel
+
+                return new ProdutoModel
                 {
                     Id = produto.Id,
                     Nome = produto.Nome,
                     Descricao = produto.Descricao,
-                    Foto=produto.Foto,
+                    Foto = produto.Foto,
                     Preco = produto.Preco,
                     QuantidadeEstoque = produto.QuantidadeEstoque,
                 };
@@ -104,7 +104,7 @@ namespace FundoBiblico.Aplication.Servicos
             catch (Exception ex)
             {
 
-                throw new Exception($"Erro em consultar produtor pelo {nome}",ex);
+                throw new Exception($"Erro em consultar produtor pelo {nome}", ex);
             }
         }
 
@@ -116,7 +116,7 @@ namespace FundoBiblico.Aplication.Servicos
 
                 var trazerProdutos = new List<ProdutoModel>();
 
-                foreach (var p in produtos )
+                foreach (var p in produtos)
                 {
                     var produtosRetorno = new ProdutoModel
                     {
@@ -140,26 +140,25 @@ namespace FundoBiblico.Aplication.Servicos
             }
         }
 
-        public Task Remover(Guid id)
+        public async Task Remover(Guid id)
         {
             try
             {
                 if (id == null)
                     throw new ArgumentNullException("Id não pode ser nulo.");
 
-                var obterProduto =  _produtoRepository.ObterPorId(id);
-                if(obterProduto.Result == null)
+                var obterProduto = await _produtoRepository.ObterPorId(id);
+                if (obterProduto == null)
                 {
                     throw new ArgumentNullException("Produto não existe na base de dados");
                 }
 
-                _produtoRepository.Remover(obterProduto.Result);
-                return Task.CompletedTask;
+                await _produtoRepository.Remover(obterProduto);
             }
             catch (Exception ex)
             {
 
-                throw new Exception("Não foi possivel remover no banco de dados entre contato com suporte.",ex);
+                throw new Exception("Não foi possivel remover no banco de dados entre contato com suporte.", ex);
             }
         }
     }

@@ -110,14 +110,12 @@ namespace FundoBiblico.Aplication.Servicos
             }
         }
 
-        public Task Remover(Guid id)
+        public async Task Remover(Guid id)
         {
             try
             {
-                var igrejaParaRemver = _igrejaRepository.ObterPorId(id);
-                _igrejaRepository.Remover(igrejaParaRemver.Result);
-
-                return Task.CompletedTask;
+                var igreja = await _igrejaRepository.ObterPorId(id);
+               await _igrejaRepository.Remover(igreja);
             }
             catch (Exception ex)
             {
