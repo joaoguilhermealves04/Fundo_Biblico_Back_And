@@ -1,5 +1,4 @@
-﻿using FundoBiblico.Aplication.Helper;
-using FundoBiblico.Aplication.IServicos;
+﻿using FundoBiblico.Aplication.IServicos;
 using FundoBiblico.Aplication.Models;
 using FundoBiblico.Dominio.Entity;
 using FundoBiblico.Dominio.Interfaces;
@@ -9,11 +8,9 @@ namespace FundoBiblico.Aplication.Servicos
     public class IgrejaServicos : IIgrejaServicos
     {
         private readonly IIgrejaRepository _igrejaRepository;
-        private readonly ValidacaoDosDadosHelper _validarDados;
-        public IgrejaServicos(IIgrejaRepository igrejaRepository, ValidacaoDosDadosHelper validacao)
+        public IgrejaServicos(IIgrejaRepository igrejaRepository)
         {
             _igrejaRepository = igrejaRepository;
-            _validarDados = validacao;
         }
 
         public async Task Atualizar(IgrejaAddEditarModel igrejaModel)
@@ -39,7 +36,8 @@ namespace FundoBiblico.Aplication.Servicos
         {
             try
             {
-                if (_validarDados.IgrejaExiste(igreja.Nome))
+                var igrejaValidar =  _igrejaRepository.ObterPorId(igreja.Id);
+                if (igreja != null)
                     throw new Exception("Essa Igreja já existe na base de Dados");
 
 

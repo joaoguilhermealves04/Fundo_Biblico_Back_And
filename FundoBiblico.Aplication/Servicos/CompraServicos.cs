@@ -1,33 +1,22 @@
-﻿using FundoBiblico.Aplication.Helper;
-using FundoBiblico.Aplication.IServicos;
+﻿using FundoBiblico.Aplication.IServicos;
 using FundoBiblico.Aplication.Models;
 using FundoBiblico.Dominio.Entities;
 using FundoBiblico.Dominio.Interfaces;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net.Http.Headers;
-using System.Runtime.CompilerServices;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace FundoBiblico.Aplication.Servicos
 {
     public class CompraServicos : ICompraServices
     {
         private readonly ICompraRepository _compraRepository;
-        private readonly ValidacaoDosDadosHelper _validacaoDosDadosHelper;
-        public CompraServicos(ICompraRepository compraRepository, ValidacaoDosDadosHelper validacaoDosDadosHelper)
+        public CompraServicos(ICompraRepository compraRepository)
         {
             _compraRepository = compraRepository;
-            _validacaoDosDadosHelper = validacaoDosDadosHelper;
         }
 
         public Task Atualizar(CompraEditarAddModel compra)
         {
-            var validarIgreja = _validacaoDosDadosHelper.IgrejaExiste(compra.igreja.Nome) ? true : false;
-            if (!validarIgreja)
-                throw new ArgumentException("Igreja não encontrada na nossa base de dados");
+            if (compra == null)
+                throw new ArgumentException("Por favor Preencha os campos.");
 
             var inseriCompra = new Compra(compra.ClienteId, compra.IgrejaId, compra.ProdutoId, compra.ValorProduto, compra.Quantidade);
              _compraRepository.Atualizar(inseriCompra);
@@ -41,11 +30,6 @@ namespace FundoBiblico.Aplication.Servicos
             {
                 if (compra is null)
                     throw new ArgumentNullException("A propriedade não pode se nula pode preencher corretamente");
-
-                var validarIgreja = _validacaoDosDadosHelper.IgrejaExiste(compra.igreja.Nome) ? true : false;
-                if (!validarIgreja)
-                    throw new ArgumentException("Igreja não encontrada na nossa base de dados");
-
 
                 var inseriCompra = new Compra(compra.ClienteId, compra.IgrejaId, compra.ProdutoId, compra.ValorProduto, compra.Quantidade);
                 await _compraRepository.Adicionar(inseriCompra);

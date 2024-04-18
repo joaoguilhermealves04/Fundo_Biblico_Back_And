@@ -1,5 +1,4 @@
-﻿using FundoBiblico.Aplication.Helper;
-using FundoBiblico.Aplication.IServicos;
+﻿using FundoBiblico.Aplication.IServicos;
 using FundoBiblico.Aplication.Models;
 using FundoBiblico.Dominio.Entity;
 using FundoBiblico.Dominio.Interfaces;
@@ -9,11 +8,9 @@ namespace FundoBiblico.Aplication.Servicos
     public class ProdutoServicos : IProdutoServicos
     {
         private readonly IProdutoRepository _produtoRepository;
-        private readonly ValidacaoDosDadosHelper _vailidar;
-        public ProdutoServicos(IProdutoRepository produtoRepository, ValidacaoDosDadosHelper validacaoDosDadosHelper)
+        public ProdutoServicos(IProdutoRepository produtoRepository)
         {
             _produtoRepository = produtoRepository;
-            _vailidar = validacaoDosDadosHelper;
         }
         public async Task Atualizar(ProdutoAddEditarModel produto)
         {
