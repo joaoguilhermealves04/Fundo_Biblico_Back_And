@@ -36,11 +36,6 @@ namespace FundoBiblico.Aplication.Servicos
         {
             try
             {
-                var igrejaValidar =  _igrejaRepository.ObterPorId(igreja.Id);
-                if (igreja != null)
-                    throw new Exception("Essa Igreja já existe na base de Dados");
-
-
                 var InserirIgreja = new Igreja(igreja.Nome, igreja.UF, igreja.Setor);
 
                 await _igrejaRepository.Adicionar(InserirIgreja);

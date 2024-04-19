@@ -1,5 +1,4 @@
-﻿using FundoBiblico.Aplication.Helper;
-using FundoBiblico.Aplication.IServicos;
+﻿using FundoBiblico.Aplication.IServicos;
 using FundoBiblico.Aplication.Servicos;
 using FundoBiblico.Dominio.Interfaces;
 using FundoBiblico.Repository.Repository;
@@ -21,13 +20,11 @@ namespace FundoBiblico.Infra.Ioc
             services.AddScoped<IIgrejaRepository, IgrejaRepository>();
             services.AddScoped<IProdutoRepository, ProdutoRepository>();
             services.AddScoped<ICompraRepository, CompraRepository>();
-           
+            services.AddScoped<IIgrejaProdutoRepository, IgrejaProdutoRepository>();
+
             // Serviços
             services.AddScoped<IClienteServicos, ClienteServicos>();
             services.AddScoped<IIgrejaServicos, IgrejaServicos>();
-
-            // Validações 
-            services.AddScoped<ValidacaoDosDadosHelper>();
 
             return services;
         }
