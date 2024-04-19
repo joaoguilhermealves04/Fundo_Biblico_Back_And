@@ -17,5 +17,12 @@ namespace FundoBiblico.Dominio.Entities
         public Produto Produto { get; set; }
 
         public int Quantidade{ get; set; }
+
+        public IgrejaProduto(Guid igrejaId,Guid produtoId,int quantidade)
+        {
+            IgrejaId = igrejaId;
+            ProdutoId = produtoId;
+            Quantidade = quantidade;
+        }
     }
 }
