@@ -13,10 +13,6 @@ namespace FundoBiblico.Dominio.Entity
 
         public Cliente(string nome)
         {
-            Nome = nome;
-        }
-        public Cliente(string nome, Igreja igrejaPertencente)
-        {
             SetNome(nome);
         }
 
@@ -28,10 +24,9 @@ namespace FundoBiblico.Dominio.Entity
         private void SetNome(string nome)
         {
             if (string.IsNullOrEmpty(nome))
-                throw new ArgumentException("Por favor! Preencha o nome");
+                throw new Exception("Por favor! Preencha o nome");
 
             Nome = nome;
         }
-
     }
 }

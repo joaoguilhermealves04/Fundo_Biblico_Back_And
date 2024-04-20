@@ -23,6 +23,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FundoBiblico.Repository", "
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FundoBiblicoApi", "FundoBiblicoApi\FundoBiblicoApi.csproj", "{1137FAB3-EAE9-4363-A860-24ED8DC96F23}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Testes", "Testes", "{C6378889-7DF7-4832-A809-8F1A87515DFA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FundoBiblico.Test", "FundoBiblicoDominio.Test\FundoBiblico.Test.csproj", "{BF4F0668-D457-41B0-A32B-C09FF1F541B9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -49,6 +53,10 @@ Global
 		{1137FAB3-EAE9-4363-A860-24ED8DC96F23}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1137FAB3-EAE9-4363-A860-24ED8DC96F23}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1137FAB3-EAE9-4363-A860-24ED8DC96F23}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BF4F0668-D457-41B0-A32B-C09FF1F541B9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BF4F0668-D457-41B0-A32B-C09FF1F541B9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BF4F0668-D457-41B0-A32B-C09FF1F541B9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BF4F0668-D457-41B0-A32B-C09FF1F541B9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -59,6 +67,7 @@ Global
 		{DD2BC59C-0F0F-4F35-B230-A7B3F593ED30} = {DC9B1DD9-4F3F-4A37-8DF2-6FD75B0FB9FC}
 		{E0679BB7-C764-476F-B55E-3973C4A4CCBB} = {4D0828E0-E0E1-49F1-907B-E30256E3A212}
 		{1137FAB3-EAE9-4363-A860-24ED8DC96F23} = {07F94EF9-6B1D-4FCE-AED3-FD4AB9A06667}
+		{BF4F0668-D457-41B0-A32B-C09FF1F541B9} = {C6378889-7DF7-4832-A809-8F1A87515DFA}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {D8D7466B-EE0B-4A81-BB84-4C13163B6E6F}
