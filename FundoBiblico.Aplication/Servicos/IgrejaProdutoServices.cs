@@ -18,11 +18,17 @@ namespace FundoBiblico.Aplication.Servicos
             try
             {
                 if (igrejaProduto == null)
-                    throw new ArgumentNullException("Por favor  preencher corretamente.");
+                    throw new ArgumentNullException(nameof(igrejaProduto), "Por favor preencha corretamente.");
 
-                var atualizar = new IgrejaProduto(igrejaProduto.ProdutoId, igrejaProduto.IgrejaId, igrejaProduto.Quantidade);
-                _igrejaProdutoRepository.Atualizar(atualizar);
-                
+                var Resultado =  _igrejaProdutoRepository.ObterPorId(igrejaProduto.Id);
+
+                if (Resultado == null)
+                    throw new NotFiniteNumberException("IgrejaProduto Não encontrado.");
+
+                Resultado.Result.Quantidade = igrejaProduto.Quantidade;
+
+                _igrejaProdutoRepository.Atualizar(Resultado.Result);
+
                 return Task.CompletedTask;
             }
             catch (Exception ex)
