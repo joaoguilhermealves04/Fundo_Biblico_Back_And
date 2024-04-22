@@ -9,19 +9,19 @@ namespace FundoBiblico.Aplication.Models
 {
     public class CompraEditarAddModel
     {
-        public Guid ClienteId { get; private set; }
-        public Cliente Cliente { get; private set; }
+        public Guid ClienteId { get;  set; }
+        public Cliente Cliente { get;  set; }
 
-        public Guid IgrejaId { get; private set; }
-        public Igreja igreja { get; private set; }
+        public Guid IgrejaId { get; set; }
+        public Igreja igreja { get; set; }
 
-        public Guid ProdutoId { get; private set; }
-        public Produto Produto { get; private set; }
+        public Guid ProdutoId { get; set; }
+        public Produto Produto { get; set; }
 
-        public decimal ValorProduto { get; private set; }
+        public decimal ValorProduto { get; set; }
 
-        public DateTime DataCompra { get; private set; }
+        public DateTime DataCompra { get; set; }
 
-        public int Quantidade { get; private set; }
+        public int Quantidade { get; set; }
     }
 }

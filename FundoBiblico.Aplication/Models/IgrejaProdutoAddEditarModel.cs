@@ -9,6 +9,7 @@ namespace FundoBiblico.Aplication.Models
 {
     public class IgrejaProdutoAddEditarModel
     {
+        public Guid Id { get; set; }
         public Guid IgrejaId { get; set; }
         public Igreja Igreja { get; set; }
 

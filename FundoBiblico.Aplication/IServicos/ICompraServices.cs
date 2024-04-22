@@ -9,9 +9,9 @@ namespace FundoBiblico.Aplication.IServicos
 {
     public interface ICompraServices
     {
-        Task CadastroCompra(CompraModel compra);
+        Task CadastroCompra(CompraEditarAddModel compra);
         Task Atualizar(CompraEditarAddModel compra);
-        Task<IEnumerable<CompraModel>> ObterCompra();
+        Task<IEnumerable<CompraModel>> ObterCompras();
         Task<CompraModel> ObterCompra(Guid id);
         Task Remover(Guid id);
     }

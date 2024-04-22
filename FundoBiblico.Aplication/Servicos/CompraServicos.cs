@@ -24,7 +24,7 @@ namespace FundoBiblico.Aplication.Servicos
             return Task.CompletedTask;
         }
 
-        public async Task CadastroCompra(CompraModel compra)
+        public async Task CadastroCompra(CompraEditarAddModel compra)
         {
             try
             {
@@ -42,7 +42,7 @@ namespace FundoBiblico.Aplication.Servicos
             }
         }
 
-        public async Task<IEnumerable<CompraModel>> ObterCompra()
+        public async Task<IEnumerable<CompraModel>> ObterCompras()
         {
             try
             {
