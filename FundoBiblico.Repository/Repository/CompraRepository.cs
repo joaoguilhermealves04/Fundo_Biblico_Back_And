@@ -7,21 +7,21 @@ namespace FundoBiblico.Repository.Repository
     public class CompraRepository : ICompraRepository
     {
         private readonly FundoBiblicoContext _context;
-        public CompraRepository(FundoBiblicoContext fundoBiblico) 
+        public CompraRepository(FundoBiblicoContext fundoBiblico)
         {
             _context = fundoBiblico;
         }
 
         public async Task Adicionar(Compra compra)
         {
-           await _context.AddAsync(compra);
-           _context.SaveChanges();
+            await _context.AddAsync(compra);
+            await _context.SaveChangesAsync();
         }
 
-        public void Atualizar(Compra compra)
+        public async void Atualizar(Compra compra)
         {
             _context.Update(compra);
-            _context.SaveChanges();
+            await _context.SaveChangesAsync();
         }
 
         public async Task<Compra> ObterPorId(Guid id)
@@ -36,8 +36,8 @@ namespace FundoBiblico.Repository.Repository
 
         public async Task Remover(Compra compra)
         {
-             _context.Remove(compra);
-             _context.SaveChanges();
+            _context.Remove(compra);
+            await _context.SaveChangesAsync();
         }
 
         public void Dispose()

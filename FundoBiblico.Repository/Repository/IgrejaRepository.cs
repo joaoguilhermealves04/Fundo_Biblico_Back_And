@@ -15,23 +15,23 @@ namespace FundoBiblico.Repository.Repository
         public async Task Adicionar(Igreja igreja)
         {
             await _context.AddAsync(igreja);
-            _context.SaveChanges();
+            await _context.SaveChangesAsync();
         }
 
         public async void Atualizar(Igreja igreja)
         {
-             _context.Update(igreja);
-            _context.SaveChanges();
+            _context.Update(igreja);
+            await _context.SaveChangesAsync();
         }
 
         public async Task<Igreja> ObterPorId(Guid id)
         {
-           return await _context.Igrejas.FirstOrDefaultAsync(x => x.Id == id);
+            return await _context.Igrejas.FirstOrDefaultAsync(x => x.Id == id);
         }
 
         public async Task<Igreja> ObterPorNome(string nome)
         {
-            return await _context.Igrejas.FirstOrDefaultAsync(x =>x.Nome == nome);
+            return await _context.Igrejas.FirstOrDefaultAsync(x => x.Nome == nome);
         }
 
         public async Task<IEnumerable<Igreja>> ObterTodos()
@@ -42,7 +42,7 @@ namespace FundoBiblico.Repository.Repository
         public async Task Remover(Igreja igreja)
         {
             _context.Remove(igreja);
-            _context.SaveChanges();
+            await _context.SaveChangesAsync();
         }
 
         public void Dispose()

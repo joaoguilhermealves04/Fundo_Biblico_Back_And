@@ -19,13 +19,13 @@ namespace FundoBiblico.Repository.Repository
         public async Task Adicionar(IgrejaProduto igrejaProduto)
         {
             await _context.AddAsync(igrejaProduto);
-            _context.SaveChanges();
+            await _context.SaveChangesAsync();
         }
 
-        public void Atualizar(IgrejaProduto igrejaProduto)
+        public async void Atualizar(IgrejaProduto igrejaProduto)
         {
             _context.Update(igrejaProduto);
-            _context.SaveChanges();
+            await _context.SaveChangesAsync();
         }
 
         public async Task<IgrejaProduto> ObterPorId(Guid id)
@@ -41,7 +41,7 @@ namespace FundoBiblico.Repository.Repository
         public async Task Remover(IgrejaProduto igrejaProduto)
         {
             _context.Remove(igrejaProduto);
-            _context.SaveChanges();
+            await _context.SaveChangesAsync();
         }
     }
 }

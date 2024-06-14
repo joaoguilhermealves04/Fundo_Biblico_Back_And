@@ -15,13 +15,13 @@ namespace FundoBiblico.Repository.Repository
         public async Task Adicionar(Cliente cliente)
         {
             await _context.AddAsync(cliente);
-            _context.SaveChanges();
+            await _context.SaveChangesAsync();
         }
 
-        public void Atualizar(Cliente cliente)
+        public async void Atualizar(Cliente cliente)
         {
             _context.Update(cliente);
-            _context.SaveChanges();
+           await _context.SaveChangesAsync();
         }
 
         public async Task<Cliente> ObterPorId(Guid id)
@@ -37,7 +37,7 @@ namespace FundoBiblico.Repository.Repository
         public async Task Remover(Cliente cliente)
         {
             _context.Remove(cliente);
-            _context.SaveChanges();
+            await _context.SaveChangesAsync();
         }
 
         public void Dispose()
