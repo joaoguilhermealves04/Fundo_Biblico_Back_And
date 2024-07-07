@@ -1,10 +1,12 @@
 ﻿using FundoBiblico.Aplication.IServicos;
 using FundoBiblico.Aplication.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace FundoBiblicoApi.Controllers
 {
     [Route("api/produto")]
+    [Authorize]
     public class ProdutoController : Controller
     {
         private readonly IProdutoServicos _produtoServicos;

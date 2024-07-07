@@ -9,14 +9,24 @@ namespace FundoBiblico.Infra.Ioc
 {
     public class ConnectionStringHelper
     {
-        public static string Conexao ()
+        public static string FundoBiblico()
         {
             IConfiguration configuration  = new ConfigurationBuilder()
                 .SetBasePath (Directory.GetCurrentDirectory())
                 .AddJsonFile("appsettings.json")
                 .Build ();
 
-            return configuration.GetConnectionString("conexao");
+            return configuration.GetConnectionString("FundoBiblico");
+        }
+
+        public static string Administrativo()
+        {
+            IConfiguration configuration = new ConfigurationBuilder()
+                .SetBasePath(Directory.GetCurrentDirectory())
+                .AddJsonFile("appsettings.json")
+                .Build();
+
+            return configuration.GetConnectionString("Administrativo");
         }
     }
 }

@@ -1,11 +1,14 @@
 ﻿using FundoBiblico.Aplication.IServicos;
 using FundoBiblico.Aplication.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.IdentityModel.Tokens;
+using System.Runtime.InteropServices;
 
 namespace FundoBiblicoApi.Controllers
 {
     [Route("api/IgrejaProduto")]
+    [Authorize]
     public class IgrejaProdutoController : Controller
     {
         private readonly IIgrejaProdutoServices _services;
