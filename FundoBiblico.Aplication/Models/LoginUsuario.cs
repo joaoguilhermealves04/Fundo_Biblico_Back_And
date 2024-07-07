@@ -17,4 +17,18 @@ namespace FundoBiblico.Aplication.Models
         [DataType(DataType.Password)]
         public string Password { get; set; }
     }
+
+    public class LoginReponseViewModel
+    {
+        public string AccessToken { get; set; }
+        public double ExpiresIn { get; set; }
+        public UserTokenViewModel UserToken { get; set; }
+    }
+
+    public class UserTokenViewModel
+    {
+        public Guid Id { get; set; }
+        public string Email { get; set; }
+        public string Nome { get; set; }
+    }
 }

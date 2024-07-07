@@ -24,25 +24,25 @@ namespace FundoBiblico.Aplication.Token
             _audience = audience;
         }
 
-        public string GenerateToken(Usuario user, int expiresInSeconds)
-        {
-            var tokenHandler = new JwtSecurityTokenHandler();
-            var key = _key;
-            var tokenDescriptor = new SecurityTokenDescriptor
-            {
-                Expires = DateTime.UtcNow.AddHours(8),
-                SigningCredentials = new SigningCredentials(key, SecurityAlgorithms.HmacSha256Signature),
-                Issuer = _issuer,
-                Audience = _audience,
-                Claims = new[]
-                {
-                    new Claim(ClaimTypes.Email, user.Email),
-                    new Claim(ClaimTypes.Expired, DateTime.UtcNow.AddHours(8)))
-                }
-            };
+        //public string GenerateToken(Usuario user, int expiresInSeconds)
+        //{
+        //    var tokenHandler = new JwtSecurityTokenHandler();
+        //    var key = _key;
+        //    var tokenDescriptor = new SecurityTokenDescriptor
+        //    {
+        //        Expires = DateTime.UtcNow.AddHours(8),
+        //        SigningCredentials = new SigningCredentials(key, SecurityAlgorithms.HmacSha256Signature),
+        //        Issuer = _issuer,
+        //        Audience = _audience,
+        //        Claims = new[]
+        //        {
+        //            new Claim(ClaimTypes.Email, user.Email),
+        //            new Claim(ClaimTypes.Expired, DateTime.UtcNow.AddHours(8)))
+        //        }
+        //    };
 
-            var token = tokenHandler.CreateToken(tokenDescriptor);
-            return tokenHandler.WriteToken(token);
-        }
+        //    var token = tokenHandler.CreateToken(tokenDescriptor);
+        //    return tokenHandler.WriteToken(token);
+        //}
     }
 }
