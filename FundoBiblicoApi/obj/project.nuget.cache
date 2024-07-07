@@ -1,7 +1,7 @@
 {
   "version": 2,
-  "dgSpecHash": "F9xbH7Wtb0OkU1UM6AvPd8G0c0cyGjTpfRT/+TSDkFcLtjakTPm1A5cSb8uHPnDVVoREIJ8QQTBOIfl3dUIJwg==",
-  "success": true,
+  "dgSpecHash": "zpDlKMKRl2hPhbGMs6lAxr1MdQKDIT9Hi5j3kyI6dAuHpfOxXQlWfA89czEgafWMa+12EmX9qNx7xzXKm5g4Rg==",
+  "success": false,
   "projectFilePath": "C:\\Users\\joaog\\Documents\\CCB\\Fundo_Biblico_Back_And\\FundoBiblicoApi\\FundoBiblicoApi.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\joaog\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
@@ -36,13 +36,13 @@
     "C:\\Users\\joaog\\.nuget\\packages\\microsoft.codeanalysis.workspaces.common\\4.5.0\\microsoft.codeanalysis.workspaces.common.4.5.0.nupkg.sha512",
     "C:\\Users\\joaog\\.nuget\\packages\\microsoft.data.sqlclient\\5.1.5\\microsoft.data.sqlclient.5.1.5.nupkg.sha512",
     "C:\\Users\\joaog\\.nuget\\packages\\microsoft.data.sqlclient.sni.runtime\\5.1.1\\microsoft.data.sqlclient.sni.runtime.5.1.1.nupkg.sha512",
-    "C:\\Users\\joaog\\.nuget\\packages\\microsoft.entityframeworkcore\\8.0.6\\microsoft.entityframeworkcore.8.0.6.nupkg.sha512",
-    "C:\\Users\\joaog\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\8.0.6\\microsoft.entityframeworkcore.abstractions.8.0.6.nupkg.sha512",
-    "C:\\Users\\joaog\\.nuget\\packages\\microsoft.entityframeworkcore.analyzers\\8.0.6\\microsoft.entityframeworkcore.analyzers.8.0.6.nupkg.sha512",
-    "C:\\Users\\joaog\\.nuget\\packages\\microsoft.entityframeworkcore.design\\8.0.6\\microsoft.entityframeworkcore.design.8.0.6.nupkg.sha512",
+    "C:\\Users\\joaog\\.nuget\\packages\\microsoft.entityframeworkcore\\8.0.3\\microsoft.entityframeworkcore.8.0.3.nupkg.sha512",
+    "C:\\Users\\joaog\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\8.0.3\\microsoft.entityframeworkcore.abstractions.8.0.3.nupkg.sha512",
+    "C:\\Users\\joaog\\.nuget\\packages\\microsoft.entityframeworkcore.analyzers\\8.0.3\\microsoft.entityframeworkcore.analyzers.8.0.3.nupkg.sha512",
+    "C:\\Users\\joaog\\.nuget\\packages\\microsoft.entityframeworkcore.design\\8.0.3\\microsoft.entityframeworkcore.design.8.0.3.nupkg.sha512",
     "C:\\Users\\joaog\\.nuget\\packages\\microsoft.entityframeworkcore.relational\\8.0.6\\microsoft.entityframeworkcore.relational.8.0.6.nupkg.sha512",
-    "C:\\Users\\joaog\\.nuget\\packages\\microsoft.entityframeworkcore.sqlserver\\8.0.6\\microsoft.entityframeworkcore.sqlserver.8.0.6.nupkg.sha512",
-    "C:\\Users\\joaog\\.nuget\\packages\\microsoft.entityframeworkcore.tools\\8.0.6\\microsoft.entityframeworkcore.tools.8.0.6.nupkg.sha512",
+    "C:\\Users\\joaog\\.nuget\\packages\\microsoft.entityframeworkcore.sqlserver\\8.0.3\\microsoft.entityframeworkcore.sqlserver.8.0.3.nupkg.sha512",
+    "C:\\Users\\joaog\\.nuget\\packages\\microsoft.entityframeworkcore.tools\\8.0.3\\microsoft.entityframeworkcore.tools.8.0.3.nupkg.sha512",
     "C:\\Users\\joaog\\.nuget\\packages\\microsoft.extensions.apidescription.server\\6.0.5\\microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",
     "C:\\Users\\joaog\\.nuget\\packages\\microsoft.extensions.caching.abstractions\\8.0.0\\microsoft.extensions.caching.abstractions.8.0.0.nupkg.sha512",
     "C:\\Users\\joaog\\.nuget\\packages\\microsoft.extensions.caching.memory\\8.0.0\\microsoft.extensions.caching.memory.8.0.0.nupkg.sha512",
@@ -142,6 +142,24 @@
       "warningLevel": 1,
       "message": "O pacote 'Microsoft.AspNet.Identity.EntityFramework 2.2.4' foi restaurado usando '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' em vez da estrutura de destino do projeto 'net8.0'. Esse pacote pode não ser totalmente compatível com o seu projeto.",
       "libraryId": "Microsoft.AspNet.Identity.EntityFramework",
+      "targetGraphs": [
+        "net8.0"
+      ]
+    },
+    {
+      "code": "NU1605",
+      "level": "Error",
+      "message": "Aviso como Erro: Downgrade de pacote detectado: Microsoft.EntityFrameworkCore de 8.0.6 para 8.0.3. Referencie o pacote diretamente do projeto para selecionar uma versão diferente. \r\n FundoBiblicoApi -> FundoBiblico.Infra.Ioc -> Administrativo.Repository -> Microsoft.EntityFrameworkCore (>= 8.0.6) \r\n FundoBiblicoApi -> Microsoft.EntityFrameworkCore (>= 8.0.3)",
+      "libraryId": "Microsoft.EntityFrameworkCore",
+      "targetGraphs": [
+        "net8.0"
+      ]
+    },
+    {
+      "code": "NU1605",
+      "level": "Error",
+      "message": "Aviso como Erro: Downgrade de pacote detectado: Microsoft.EntityFrameworkCore.SqlServer de 8.0.6 para 8.0.3. Referencie o pacote diretamente do projeto para selecionar uma versão diferente. \r\n FundoBiblicoApi -> FundoBiblico.Infra.Ioc -> Administrativo.Repository -> Microsoft.EntityFrameworkCore.SqlServer (>= 8.0.6) \r\n FundoBiblicoApi -> Microsoft.EntityFrameworkCore.SqlServer (>= 8.0.3)",
+      "libraryId": "Microsoft.EntityFrameworkCore.SqlServer",
       "targetGraphs": [
         "net8.0"
       ]
