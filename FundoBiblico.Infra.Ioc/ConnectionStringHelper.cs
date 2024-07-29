@@ -19,14 +19,5 @@ namespace FundoBiblico.Infra.Ioc
             return configuration.GetConnectionString("FundoBiblico");
         }
 
-        public static string Administrativo()
-        {
-            IConfiguration configuration = new ConfigurationBuilder()
-                .SetBasePath(Directory.GetCurrentDirectory())
-                .AddJsonFile("appsettings.json")
-                .Build();
-
-            return configuration.GetConnectionString("Administrativo");
-        }
     }
 }

@@ -1,5 +1,4 @@
-﻿using Administrativo.Repository.Data;
-using FundoBiblico.Aplication.IServicos;
+﻿using FundoBiblico.Aplication.IServicos;
 using FundoBiblico.Aplication.Servicos;
 using FundoBiblico.Dominio.Interfaces;
 using FundoBiblico.Repository.Repository;
@@ -15,9 +14,6 @@ namespace FundoBiblico.Infra.Ioc
         {
             services.AddDbContext<FundoBiblicoContext>
                 (options => options.UseSqlServer(ConnectionStringHelper.FundoBiblico()));
-
-            services.AddDbContext<AdministrativoContexto>
-                (options => options.UseSqlServer(ConnectionStringHelper.Administrativo()));
 
             // Repositorios 
             services.AddScoped<IClienteRepositroy, ClienteRepository>();

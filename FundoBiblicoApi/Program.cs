@@ -8,7 +8,6 @@ builder.Services.AddControllers();
 
 //Registro de Idependecia e Configuração do banco de dados
 builder.Services.AddInfrastuctureAPi(builder.Configuration);
-builder.Services.IdentityInfraConfiguration();
 // Add services to the container.
 //Dependency Injector
 builder.Services.AddClassesMatchingInterfaces(nameof(FundoBiblico));
