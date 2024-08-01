@@ -15,15 +15,15 @@ builder.Services.AddClassesMatchingInterfaces(nameof(FundoBiblico));
 //Swagger
 builder.Services.RegisterSwagger();
 
-builder.Services.JWTTokenConfiguration();
-builder.Services.AddAuthentication();
+//builder.Services.JWTTokenConfiguration();
+//builder.Services.AddAuthentication();
 var app = builder.Build();
 
-using (var serviceScope = app.Services.GetService<IServiceScopeFactory>().CreateScope())
-{
-    var serviceProvider = serviceScope.ServiceProvider;
-    await SeedRoles.CreateRoles(serviceProvider);
-}
+//using (var serviceScope = app.Services.GetService<IServiceScopeFactory>().CreateScope())
+//{
+//    var serviceProvider = serviceScope.ServiceProvider;
+//    await SeedRoles.CreateRoles(serviceProvider);
+//}
 
 if (app.Environment.IsDevelopment())
 {
@@ -38,7 +38,7 @@ else
 
 app.UseHttpsRedirection();
 
-app.MapGroup("/identity").MapIdentityApi<IdentityUser>();
+//app.MapGroup("/identity").MapIdentityApi<IdentityUser>();
 
 app.UseStaticFiles();
 

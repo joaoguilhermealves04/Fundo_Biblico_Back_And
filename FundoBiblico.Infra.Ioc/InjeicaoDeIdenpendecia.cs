@@ -21,6 +21,7 @@ namespace FundoBiblico.Infra.Ioc
             services.AddScoped<IProdutoRepository, ProdutoRepository>();
             services.AddScoped<ICompraRepository, CompraRepository>();
             services.AddScoped<IIgrejaProdutoRepository, IgrejaProdutoRepository>();
+            services.AddScoped<IAccountRepository, AccountRepository>();
 
             // Serviços
             services.AddScoped<IClienteServicos, ClienteServicos>();
